@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI';
+}
+nav {
+    height: 70px;
+    /* background-color: aqua; */
+    display: flex;
+    padding: 20px;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo img {
+    height: 60px;
+}
+.anchors ul {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 18px;
+    width: 700px;
+    /* border: 1px solid black; */
+}
+.anchors ul li {
+    list-style: none;
+}
+.anchors ul li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+main #main-section {
+    /* padding: 0 480px; */
+    height: 60vh;
+    /* background-color: aquamarine; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main #main-section h1 {
+    font-size: 42px;
+    font-weight: 400;
+    padding-bottom: 40px;
+}
+main #main-section h1 span {
+    font-weight: bold;
+}
+main #main-section p {
+    font-size: 24px;
+    padding: 0 300px;
+    text-align: center;
+    padding-bottom: 30px;
+}
+main #main-section > button {
+    background-color: #00b6d1;
+    padding: 15px 20px;
+    border-radius: 15px;
+    font-weight: bold;
+    color: white;
+    border-color: #00b6d1;
+}
+.products {
+    width: 70vw;
+    margin: auto;
+    /* border: 2px solid black; */
+    margin-bottom: 40px;
+}
+.products .logo {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    padding-bottom: 40px;
+}
+.products .cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    column-gap: 40px;
+}
+.products .cards .card {
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 150px;
+    background-color: #f9f9f9;
+}
+.products .cards .card h3 {
+    padding-bottom: 10px;
+}
+.products .cards .card p {
+    padding-bottom: 10px;
+}
+.card .buttons button:nth-child(1) {
+    background-color: #00b6d1;
+    color: white;
+    margin-top: 5px;
+    padding: 10px 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+}
+.card .buttons button:nth-child(2) {
+    background-color: #5cb85c;
+    color: white;
+    padding: 10px 12px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+}
+article {
+    height: 100vh;
+    background-color: #222222;
+    margin-bottom: 40px;
+}
+article .subscribe {
+    height: 60vh;
+    width: 70vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* flex-direction: column; */
+}
+article .content {
+    color: white;
+    text-align: center;
+    height: 250px;
+    width: 550px;
+    padding: 100px 30px;
+}
+article .content h2 {
+    padding-bottom: 20px;
+}
+article .content p {
+    line-height: 1.5;
+}
+article .form {
+    background-color: white;
+    height: 250px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+    border-radius: 15px;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+article .form h2 {
+    color: #00b6d1;
+    font-weight: 500;
+    padding-bottom: 30px;
+}
+article .form input {
+    margin-top: 5px;
+    height: 50px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+article .form button {
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    background-color: #00b6d1;
+    border: none;
+    border-radius: 15px;
+    height: 50px;
+    width: 100%;
+}
+article .explaination {
+    width: 70vw;
+    margin: auto;
+    color: white;
+}
+article .explaination h2 {
+    padding-top: 10px;
+    font-weight: 400;
+    padding-bottom: 10px;
+}
+article .explaination p {
+    padding-bottom: 20px;
+}
+article .explaination p a {
+    color: #00b6d1;
+    text-decoration: none;
+}
+footer {
+    margin-bottom: 30px;
+}
+footer .foot {
+    margin: auto;
+    width: 70vw;
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    /* align-content: center; */
+    grid-template-areas: "card1 card2 card3 card4"
+                         "logo logo logo hyper";
+    grid-template-columns: repeat(4, 1fr);
+}
+footer .foot .card {
+    padding: 20px;
+}
+footer .foot .card-1 {
+    grid-area: card1;
+}
+footer .foot .card-2 {
+    grid-area: card2;
+}
+footer .foot .card-3 {
+    grid-area: card3;
+}
+footer .foot .card-4 {
+    grid-area: card4;
+}
+footer .foot .card-4 input {
+    height: 40px;
+    border: none;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 5px;
+    width: 100%;
+    margin: 10px 0;
+}
+footer .foot .card-4 button {
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    background-color: #00b6d1;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    width: 100%;
+}
+.hyper-tags img {
+    height: 25px;
+}
+footer .foot .logo {
+    grid-area: logo;
+    justify-items: start;
+}
+button:hover {
+    cursor: pointer;
+}
+.others:hover {
+    cursor: pointer;
+    scale: 1.1;
+}
