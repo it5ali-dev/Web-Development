@@ -33,6 +33,10 @@ nav {
     color: black;
     padding: 10px;
 }
+ul li a:hover {
+    color: grey;
+    scale: 1.01;
+}
 main #main-section {
     /* padding: 0 480px; */
     height: 60vh;
@@ -84,7 +88,7 @@ main #main-section > button {
     column-gap: 40px;
 }
 .products .cards .card {
-    /* text-align: center; */
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -220,6 +224,7 @@ footer .foot .card-3 {
     grid-area: card3;
 }
 footer .foot .card-4 {
+    padding: 10px;
     grid-area: card4;
 }
 footer .foot .card-4 input {
@@ -252,7 +257,13 @@ button:hover {
     box-shadow: 2px 2px 3px grey, -2px -2px 3px grey;
     scale: 1.01;
 }
+.card:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 3px rgb(222, 222, 222), -2px -2px 3px rgb(222, 222, 222);
+    scale: 1.01;
+}
 .others:hover {
+    border-radius: 15px;
     cursor: pointer;
     scale: 1.1;
 }
