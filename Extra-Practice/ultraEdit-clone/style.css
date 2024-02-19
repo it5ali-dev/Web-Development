@@ -249,6 +249,8 @@ footer .foot .logo {
 }
 button:hover {
     cursor: pointer;
+    box-shadow: 2px 2px 3px grey, -2px -2px 3px grey;
+    scale: 1.01;
 }
 .others:hover {
     cursor: pointer;
