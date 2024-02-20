@@ -70,7 +70,7 @@ main p {
     font-size: 1.2em;
     padding-bottom: 20px;
 }
-main .entry {
+.entry {
     position: relative;
     z-index: 10;
     width: 30vw;
@@ -78,7 +78,7 @@ main .entry {
     display: flex;
     align-items: center;
 }
-main .entry input {
+.entry input {
     width: 20vw;
     height: 100%;
     padding: 10px;
@@ -86,11 +86,13 @@ main .entry input {
     margin-right: 5px;
     border-radius: 5px;
     border: none;
-    border: 2px solid rgb(178, 178, 178);
+    border: 1px solid rgb(178, 178, 178);
     color: white;
 }
-main .entry button {
-    width: 30%;
+.entry button {
+    border: none;
+    width: 32%;
+    padding: 5px;
     height: 100%;
     background-color: red;
     color: white;
@@ -101,19 +103,19 @@ main .entry button {
     align-items: center;
     font-weight: 600;
     font-size: 1.2em;
+
 }
-main .entry input::placeholder {
+.entry input::placeholder {
     font-size: 1.2em;
     color: rgb(194, 194, 194);
 }
-main .entry button svg {
+.entry button svg {
     padding-top: 5px;
 }
 .first {
     height: 80vh;
     margin: auto;
     border-top: 5px solid grey;
-    border-bottom: 5px solid grey;
     background-color: #000000;
     color: white;
     display: flex;
@@ -122,22 +124,21 @@ main .entry button svg {
     position: relative;
 }
 .first .content {
-    margin-left: 100px;
-    width: 40vw;
+    width: 42vw;
+    padding: 50px 10px 50px 100px;
 }
 .first .content h1 {
     font-size: 3em;
     padding-bottom: 20px;
 }
 .first .content p {
-    font-size: 1.6em;
+    font-size: 1.4em;
     padding-bottom: 20px;
 }
 .first .image {
     height: 400px;
     width: 40vw;
-    /* position: relative; */
-    z-index: 10;
+    position: inherit;
 }
 .first .image img {
     height: 400px;
@@ -146,8 +147,155 @@ main .entry button svg {
 } 
 .first .media video {
     position: absolute;
-    top: 158px;
+    top: 21%;
     width: 390px;
-    left: 942px;
+    left: 11%;
     z-index: 4;
-} 
+}
+.second .content {
+    padding-left: 0;
+    padding-right: 60px;
+}
+.second .image {
+    padding: 50px;
+    height: 50vh;
+    width: 40vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.second .image .media {
+    margin: auto;
+    position: absolute;
+    z-index: 10;
+    bottom: 0px;
+    background-color: black;
+    width: 50%;
+    height: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: 2px solid grey;
+    border-radius: 15px;
+}
+.second .image .media img {
+    object-fit: cover;
+    height: 60vh;
+    width: 60px;
+    height: auto;
+}
+.second .image .media span {
+    padding: 10px;
+}
+.second .image .media span:last-child {
+    color: blue;
+}
+.third {
+    height: 50vh;
+}
+.third .content {
+    width: 30vw;
+    padding-left: 0;
+    padding-right: 100px;
+}
+.third .space {
+    width: 20vw;
+    height: 100%;
+
+}
+.fourth {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    border-bottom: 5px solid grey;
+}
+.fourth .content {
+    width: 40vw;
+    padding-left: 0;
+    padding-right: 100px;
+}
+.fourth .image {
+    width: 40vw;
+    height: 70vh;
+    position: inherit;
+}
+.fourth .image img {
+    height: 90%;
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+}
+.questions {
+    height: 135vh;
+    background-color: #000000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 100px;
+    align-items: center;
+}
+.questions h1 {
+    font-size: 3rem;
+    padding-bottom: 20px;
+}
+.questions .card {
+    width: 80vw;
+    background-color: rgb(65, 65, 65);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    margin: 10px 0;
+}
+.questions .card span {
+    font-size: 1.5rem;
+}
+.questions p {
+    padding-top: 30px;
+    font-size: 1.3rem;
+    padding-bottom: 20px;
+    transition: all .5s ease-out;
+}
+.questions .card:hover {
+    cursor: pointer;
+    background-color: rgb(120, 120, 120);
+}
+footer {
+    border-top: 5px solid grey;
+    background-color: #000000;
+    height: 60vh;
+    display: flex;
+}
+footer .cards {
+    color: white;
+    margin: auto;
+    height: 80%;
+    width: 80vw;
+    display: flex;
+    justify-content: space-around;
+}
+select {
+    width: 6vw;
+    color: white;
+    background: transparent;
+    padding: 5px;
+    border: 2px solid white;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+footer .cards .card ul {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+footer .cards .card ul li {
+    padding-bottom: 20px;
+    list-style-type: none;
+}
+footer .cards .card ul li a {
+    color: white;
+}
