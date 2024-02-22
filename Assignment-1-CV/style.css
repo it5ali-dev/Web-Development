@@ -20,6 +20,17 @@
     position: relative;
     left: 2.4rem;
     float: left;
+    margin-right: 10rem;
+}
+.header h1 {
+    font-size: 3rem;
+    /* float: right;
+    top: 40%;
+    right: 10rem; */
+    position: relative;
+    top: 5rem;
+    float: left;
+    color: #263549;
 }
 .style-square {
     width: 13rem;
@@ -37,15 +48,6 @@
     position: absolute;
     top: -6rem;
     right: -5rem;
-}
-
-.header h1 {
-    font-size: 3rem;
-    float: right;
-    position: relative;
-    top: 40%;
-    right: 10rem;
-    color: #263549;
 }
 .main {
     /* max-width: 80vw; */
@@ -171,7 +173,14 @@ ul li {
         margin-bottom: 1rem;
     }
     .main-circle-1 {
-        width: 12rem;
-        height: 12rem;
+        width: 10rem;
+        height: 10rem;
+    }
+    .main-circle-2 {
+        width: 8rem;
+        height: 8rem;
+    }
+    .first, .second {
+        margin: 1rem 2rem 1rem 3rem;
     }
 }
