@@ -138,6 +138,7 @@ button {
     width: 90vw;
     margin: auto;  
     margin-bottom: 30px; 
+    position: relative;
 }
 .services>h2 {
     margin: 50px auto;
@@ -236,36 +237,75 @@ button {
 .faqs {
     position: relative;
 }
-.main {
-    background-color: #00917C;
-    color: white;
+.faq-main {
+    padding-top: 8rem;
     height: 70vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    background-color: #00917C;
     position: absolute;
-    top: -200px;
-    z-index: 1;
-}
-.main .cards {
-    height: 6rem;
-    width: 80%;
-    background-color: red;
+    width: 100%;
+    top: -10rem;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    margin-top: 10rem;
+    color: white;
+    margin-bottom: 3rem;
 }
-.main .cards .heading {
-    flex: .4;
+.faq-main .heading {
+    flex: .3;
 }
-.main .cards .card {
-    flex: .4;
+.faq-main .faq-cards {
+    flex: .5;
+}
+.faq-main .faq-cards .faq-card {
+    width: 90%;
     display: flex;
-    background-color: transparent;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-
+    height: 7vh;
+    border-bottom: 1px solid white;
 }
+.faq-main .faq-cards .faq-card span {
+    transform: rotate(90deg);
+}
+.test {
+    height: 80vh;
+    margin: auto;
+    margin-top: 23rem;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    background-color: #F8F9FA;
+}
+.test .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+.test .test-cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.test .test-cards .test-card {
+    width: 30%;
+    background-color: white;
+    padding: 30px;
+    position: relative;
+}
+.test .test-cards .test-card > img {
+    position: absolute;
+    top: -15px;
+    width: 25px;
+    height: 25px;
+    background-color: #00917C;
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 1px 2px 10px grey;
+}
+
+
+
