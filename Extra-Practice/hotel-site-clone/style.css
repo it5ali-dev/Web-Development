@@ -293,7 +293,7 @@ button {
 .test .test-cards .test-card {
     width: 30%;
     background-color: white;
-    padding: 30px;
+    padding: 40px 30px;
     position: relative;
 }
 .test .test-cards .test-card > img {
@@ -306,6 +306,120 @@ button {
     padding: 5px;
     box-shadow: 1px 2px 10px grey;
 }
-
+.profile {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.profile > img {
+    height: 50px;
+    width: 50px;
+    background-color: #00917C;
+    border-radius: 50%;
+}
+.profile .profile-content {
+    display: flex;
+    flex-direction: column;
+}
+.profile .profile-content span {
+    color: grey;
+}
+.insta {
+    margin-top: 1rem;
+    background-color: white;
+    width: 100%;
+}
+.insta-content {
+    width: 80%;
+    margin-bottom: 3rem;
+}
+.insta .insta-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.insta-cards .card-1 {
+    background-image: url('./images/blog-2.webp');
+    height: 30vh;
+    width: 25vw;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.insta-cards .card-2 {
+    background-image: url('./images/blog-1.webp');
+    height: 30vh;
+    width: 25vw;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.insta-cards .card-3 {
+    background-image: url('./images/blog-3.webp');
+    height: 30vh;
+    width: 25vw;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.insta .insta-card img {
+    height: 50px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+    display: none;
+}
+.insta .insta-card:hover img {
+    display: block;
+}
+footer {
+    height: 65vh;
+    display: grid;
+    grid-template-areas: 'home practice service contact'
+                         'foot foot foot foot';
+    gap: 20px;
+}
+footer ul li {
+    list-style: none;
+    line-height: 2;
+}
+.footy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.foot-menu {
+    grid-area: home;
+}
+.foot-practice {
+    grid-area: practice;
+}
+.foot-services {
+    grid-area: service;
+}
+.foot-contact {
+    grid-area: contact;
+}
+.foot {
+    grid-area: foot;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
