@@ -19,6 +19,7 @@
   footer {
     height: 55vh;
     display: grid;
+    align-items: center;
     grid-template-areas: 'home quick service'
                          'foot foot foot';
     gap: 20px;
