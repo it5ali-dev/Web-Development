@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./assets/css/line-awesome.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
-  <body>
+  <body data-bs-spy="scroll" data-bs-target=".navbar">
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-light navbar-dark fixed-top">
       <div class="container flex-lg-column">
@@ -62,18 +62,24 @@
     <!-- End Navbar Section -->
 
     <!-- Content Wrapper -->
-
     <div id="content-wrapper">
-
       <!-- Home Section -->
       <section id="home" class="full-height px-lg-5">
         <div class="container">
           <div class="row">
-            <div class="col-lg-8">
-              <h1 class="display-4 fw-bold">I'M A <span class="text-brand">FRONT-END DEVELOPER</span> FROM PAKISTAN</h1>
-              <P class="lead mt-2 mb-4">I am Ali Hassan, And I craft high-performing and delightful experiences tailored and conversion-focused</P>
-              <a href="#work" class="btn btn-brand me-3">Explore My Work</a>
-              <a href="" class="link-custom">Call: (+92) 301 881 8926</a>
+            <div class="col-lg-9">
+              <h1 class="display-4 fw-bold" data-aos="fade-up">
+                I'M A <span class="text-brand">FRONT-END DEVELOPER</span> FROM
+                PAKISTAN
+              </h1>
+              <p class="lead mt-2 mb-4" data-aos="fade-up" data-aos-delay="300">
+                I am Ali Hassan, And I craft high-performing and delightful
+                experiences tailored and conversion-focused
+              </p>
+              <div data-aos="fade-up" data-aos-delay="600">
+                <a href="#work" class="btn btn-brand me-3">Explore My Work</a>
+                <a href="" class="link-custom">Call: (+92) 301 881 8926</a>
+              </div>
             </div>
           </div>
         </div>
@@ -81,25 +87,38 @@
       <!-- End Home -->
 
       <!-- About -->
-
-      <!-- End About -->
-
-      <!-- Services -->
-      <section class="full-height px-lg-5" id="services">
+      <section id="about" class="full-height p-lg-5">
         <div class="container">
 
-          <div class="row pb-4">
+          <div class="row pb-4" data-aos="fade-up">
             <div class="col-lg-8">
-              <h6 class="text-brand">SERVICES</h6>
-              <h1>Services That I Provide</h1>
+              <h6 class="text-brand">ABOUT</h6>
+              <h1>My Education & Experience</h1>
             </div>
           </div>
 
-          <div class="row">
-            <div class="col-md-4">
-              <div class="service">
-                <div class="icon-box">
-                  <i class="las la-feather"></i>
+          <div class="row gy-5">
+            <div class="col-lg-6">
+              <h3 class="mb-4" data-aos="fade-up" data-aos-delay="300">Education</h3>
+
+              <div class="row mt-4">
+                <div class="col-12" data-aos="fade-up" data-aos-delay="600">
+                  <div class="bg-base p-4 rounded-3 shadow-effect">
+                    <h4>Bachelor in Computer Science</h4>
+                    <p class="text-brand mb-2">Comsat's University (2021 - 2025)</p>
+                    <p class="mb-0">All we are more and design Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mt-4"
+              data-aos="fade-up" data-aos-delay="900">
+                <div class="col-12">
+                  <div class="bg-base p-4 rounded-3 shadow-effect">
+                    <h5>Intermediate in Computer Science</h5>
+                    <p class="text-brand">Comsat's University (2019 - 2021)</p>
+                    <p class="lead">All we are more and design Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -107,10 +126,131 @@
 
         </div>
       </section>
+      <!-- End About -->
+
+      <!-- Services -->
+      <section class="full-height px-lg-5" id="services">
+        <div class="container">
+          <div class="row pb-4" data-aos="fade-up">
+            <div class="col-lg-8">
+              <h6 class="text-brand">SERVICES</h6>
+              <h1>Services That I Provide</h1>
+            </div>
+          </div>
+
+          <div class="row gy-4">
+            <div class="col-md-4" data-aos="fade-up">
+              <div class="service p-4 bg-base shadow-effect rounded-3">
+                <div class="iconbox rounded-3">
+                  <i class="las la-feather"></i>
+                </div>
+                <h5 class="mt-3 mb-2">Website Designing</h5>
+                <p>
+                  I craft high-performance and delightful experiences tailored
+                  and conversion-focused
+                </p>
+                <a href="#" class="link-custom">Read More</a>
+              </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+              <div class="service p-4 bg-base shadow-effect rounded-3">
+                <div class="iconbox rounded-3">
+                  <i class="las la-pencil-ruler"></i>
+                </div>
+                <h5 class="mt-3 mb-2">Front-End Developer</h5>
+                <p>
+                  I craft high-performance and delightful experiences tailored
+                  and conversion-focused
+                </p>
+                <a href="#" class="link-custom">Read More</a>
+              </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
+              <div class="service p-4 bg-base shadow-effect rounded-3">
+                <div class="iconbox rounded-3">
+                  <i class="las la-laptop-code"></i>
+                </div>
+                <h5 class="mt-3 mb-2">Back-End Developer</h5>
+                <p>
+                  I craft high-performance and delightful experiences tailored
+                  and conversion-focused
+                </p>
+                <a href="#" class="link-custom">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- End Services -->
 
-    </div>
+      <!-- Work -->
+      <section id="work" class="full-height p-lg-5">
+        <div class="container">
+          <div class="row pb-4" data-aos="fade-up">
+            <div class="col-lg-8">
+              <h6 class="text-brand">WORK</h6>
+              <h1>My Recent Projects</h1>
+            </div>
+          </div>
 
+          <div class="row gy-4">
+            <div class="col-md-6" data-aos="fade-up">
+              <div class="card-custom rounded-3 bg-base shadow-effect">
+                <div class="card-custom-image rounded-3">
+                  <img class="rounded-3" src="./assets/images/project-1.png" alt="project-1" />
+                </div>
+                <div class="card-custom-content p-4">
+                  <h4>Hotel Booking Page</h4>
+                  <p>Innovation that exceeds expectations. Astra is a true template equiped with all the elements you could ever need to put together.</p>
+                  <a href="#" class="link-custom">Read More</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="card-custom rounded-3 bg-base shadow-effect">
+                <div class="card-custom-image rounded-3">
+                  <img class="rounded-3" src="./assets/images/project-2.png" alt="project-2" />
+                </div>
+                <div class="card-custom-content p-4">
+                  <h4>Pet Hotel Booking Page</h4>
+                  <p>Innovation that exceeds expectations. Astra is a true template equiped with all the elements you could ever need to put together.</p>
+                  <a href="#" class="link-custom">Read More</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6" data-aos="fade-up">
+              <div class="card-custom rounded-3 bg-base shadow-effect">
+                <div class="card-custom-image rounded-3">
+                  <img class="rounded-3" src="./assets/images/project-4.png" alt="project-4" />
+                </div>
+                <div class="card-custom-content p-4">
+                  <h4>Pet Hotel Booking Page</h4>
+                  <p>Innovation that exceeds expectations. Astra is a true template equiped with all the elements you could ever need to put together.</p>
+                  <a href="#" class="link-custom">Read More</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="card-custom rounded-3 bg-base shadow-effect">
+                <div class="card-custom-image rounded-3">
+                  <img class="rounded-3" src="./assets/images/project-3.png" alt="project-3" />
+                </div>
+                <div class="card-custom-content p-4">
+                  <h4>Pet Hotel Booking Page</h4>
+                  <p>Innovation that exceeds expectations. Astra is a true template equiped with all the elements you could ever need to put together.</p>
+                  <a href="#" class="link-custom">Read More</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <!-- End Work -->
+    </div>
     <!-- End Content Wrapper -->
 
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
