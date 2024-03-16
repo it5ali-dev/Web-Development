@@ -97,6 +97,9 @@ body {
     color: #fff !important;
     border-color: var(--pink) !important;
 }
+.filter-button-group .btn:hover {
+    color: #fff !important;
+}
 .collection-img span {
     top: 20px;
     right: 20px;
@@ -104,6 +107,7 @@ body {
     height: 46px;
     border-radius: 50%;
 }
+
 
 
 /* media query */

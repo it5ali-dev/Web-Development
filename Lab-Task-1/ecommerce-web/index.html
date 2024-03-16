@@ -20,7 +20,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>Hello, world!</title>
+    <title>E-Commerce Store</title>
   </head>
   <body>
     <!-- navbar -->
@@ -144,23 +144,255 @@
         <div class="title text-center">
           <h2 class="position-relative d-inline-block">New Collection</h2>
         </div>
-        <div class="row">
-          <div class="d-flex flex-wrap justify-content-center mt-5">
-            <button type="button" class="btn m-2 text-dark active-filter-btn">
+        <div class="row g-0">
+          <div
+            class="d-flex flex-wrap justify-content-center mt-5 filter-button-group"
+          >
+            <button
+              type="button"
+              class="btn m-2 text-dark active-filter-btn"
+              data-filter="*"
+            >
               All
             </button>
-            <button type="button" class="btn m-2 text-dark">
+            <button type="button" class="btn m-2 text-dark" data-filter=".best">
               Best Sellers
             </button>
-            <button type="button" class="btn m-2 text-dark">Featured</button>
-            <button type="button" class="btn m-2 text-dark">New Arrival</button>
+            <button
+              type="button"
+              class="btn m-2 text-dark"
+              data-filter=".featured"
+            >
+              Featured
+            </button>
+            <button type="button" class="btn m-2 text-dark" data-filter=".new">
+              New Arrival
+            </button>
           </div>
         </div>
 
-        <div class="collection-list mt-4">
-          <div class="col-md-6 col-lg-4 col-xl-3">
+        <div class="collection-list mt-4 row gx-0 gy-3">
+
+          <div class="col-md-6 col-lg-4 col-xl-3 p-3 best">
             <div class="collection-img position-relative">
               <img src="./assets/collection-1.png" class="w-100" alt="shirt" />
+              <span
+                class="position-absolute bg-primary text-white d-flex align-items-center justify-content-center"
+                >Sale</span
+              >
+            </div>
+            <div class="text-center">
+              <div class="rating mt-3">
+                <span class="text-primary">
+                  <i class="fas fa-star"></i>
+                </span>
+                <span class="text-primary">
+                  <i class="fas fa-star"></i>
+                </span>
+                <span class="text-primary">
+                  <i class="fas fa-star"></i>
+                </span>
+                <span class="text-primary">
+                  <i class="fas fa-star"></i>
+                </span>
+                <span class="text-primary">
+                  <i class="fas fa-star"></i>
+                </span>
+              </div>
+              <p class="text text-capitalize my-1">White Shirt</p>
+              <span class="fw-bold">$ 25.50</span>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 col-xl-3 p-3 featured">
+            <div class="collection-img position-relative">
+              <img src="./assets/collection-10.png" class="w-100" alt="shirt" />
+              <span
+                class="position-absolute bg-primary text-white d-flex align-items-center justify-content-center"
+                >Sale</span
+              >
+            </div>
+            <div class="text-center">
+              <div class="rating mt-3">
+                <span class="text-primary">
+                  <i class="fas fa-star"></i>
+                </span>
+                <span class="text-primary">
+                  <i class="fas fa-star"></i>
+                </span>
+                <span class="text-primary">
+                  <i class="fas fa-star"></i>
+                </span>
+                <span class="text-primary">
+                  <i class="fas fa-star"></i>
+                </span>
+                <span class="text-primary">
+                  <i class="fas fa-star"></i>
+                </span>
+              </div>
+              <p class="text text-capitalize my-1">White Shirt</p>
+              <span class="fw-bold">$ 25.50</span>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 col-xl-3 p-3 featured">
+            <div class="collection-img position-relative">
+              <img src="./assets/collection-14.png" class="w-100" alt="shirt" />
+              <span
+                class="position-absolute bg-primary text-white d-flex align-items-center justify-content-center"
+                >Sale</span
+              >
+            </div>
+            <div class="text-center">
+              <div class="rating mt-3">
+                <span class="text-primary">
+                  <i class="fas fa-star"></i>
+                </span>
+                <span class="text-primary">
+                  <i class="fas fa-star"></i>
+                </span>
+                <span class="text-primary">
+                  <i class="fas fa-star"></i>
+                </span>
+                <span class="text-primary">
+                  <i class="fas fa-star"></i>
+                </span>
+                <span class="text-primary">
+                  <i class="fas fa-star"></i>
+                </span>
+              </div>
+              <p class="text text-capitalize my-1">White Shirt</p>
+              <span class="fw-bold">$ 25.50</span>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 col-xl-3 p-3 featured">
+            <div class="collection-img position-relative">
+              <img src="./assets/collection-13.png" class="w-100" alt="shirt" />
+              <span
+                class="position-absolute bg-primary text-white d-flex align-items-center justify-content-center"
+                >Sale</span
+              >
+            </div>
+            <div class="text-center">
+              <div class="rating mt-3">
+                <span class="text-primary">
+                  <i class="fas fa-star"></i>
+                </span>
+                <span class="text-primary">
+                  <i class="fas fa-star"></i>
+                </span>
+                <span class="text-primary">
+                  <i class="fas fa-star"></i>
+                </span>
+                <span class="text-primary">
+                  <i class="fas fa-star"></i>
+                </span>
+                <span class="text-primary">
+                  <i class="fas fa-star"></i>
+                </span>
+              </div>
+              <p class="text text-capitalize my-1">White Shirt</p>
+              <span class="fw-bold">$ 25.50</span>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 col-xl-3 p-3 new">
+            <div class="collection-img position-relative">
+              <img src="./assets/collection-8.png" class="w-100" alt="shirt" />
+              <span
+                class="position-absolute bg-primary text-white d-flex align-items-center justify-content-center"
+                >Sale</span
+              >
+            </div>
+            <div class="text-center">
+              <div class="rating mt-3">
+                <span class="text-primary">
+                  <i class="fas fa-star"></i>
+                </span>
+                <span class="text-primary">
+                  <i class="fas fa-star"></i>
+                </span>
+                <span class="text-primary">
+                  <i class="fas fa-star"></i>
+                </span>
+                <span class="text-primary">
+                  <i class="fas fa-star"></i>
+                </span>
+                <span class="text-primary">
+                  <i class="fas fa-star"></i>
+                </span>
+              </div>
+              <p class="text text-capitalize my-1">White Shirt</p>
+              <span class="fw-bold">$ 25.50</span>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 col-xl-3 p-3 best">
+            <div class="collection-img position-relative">
+              <img src="./assets/collection-9.png" class="w-100" alt="shirt" />
+              <span
+                class="position-absolute bg-primary text-white d-flex align-items-center justify-content-center"
+                >Sale</span
+              >
+            </div>
+            <div class="text-center">
+              <div class="rating mt-3">
+                <span class="text-primary">
+                  <i class="fas fa-star"></i>
+                </span>
+                <span class="text-primary">
+                  <i class="fas fa-star"></i>
+                </span>
+                <span class="text-primary">
+                  <i class="fas fa-star"></i>
+                </span>
+                <span class="text-primary">
+                  <i class="fas fa-star"></i>
+                </span>
+                <span class="text-primary">
+                  <i class="fas fa-star"></i>
+                </span>
+              </div>
+              <p class="text text-capitalize my-1">White Shirt</p>
+              <span class="fw-bold">$ 25.50</span>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 col-xl-3 p-3 best">
+            <div class="collection-img position-relative">
+              <img src="./assets/collection-12.png" class="w-100" alt="shirt" />
+              <span
+                class="position-absolute bg-primary text-white d-flex align-items-center justify-content-center"
+                >Sale</span
+              >
+            </div>
+            <div class="text-center">
+              <div class="rating mt-3">
+                <span class="text-primary">
+                  <i class="fas fa-star"></i>
+                </span>
+                <span class="text-primary">
+                  <i class="fas fa-star"></i>
+                </span>
+                <span class="text-primary">
+                  <i class="fas fa-star"></i>
+                </span>
+                <span class="text-primary">
+                  <i class="fas fa-star"></i>
+                </span>
+                <span class="text-primary">
+                  <i class="fas fa-star"></i>
+                </span>
+              </div>
+              <p class="text text-capitalize my-1">White Shirt</p>
+              <span class="fw-bold">$ 25.50</span>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 col-xl-3 p-3 new">
+            <div class="collection-img position-relative">
+              <img src="./assets/collection-14.png" class="w-100" alt="shirt" />
               <span
                 class="position-absolute bg-primary text-white d-flex align-items-center justify-content-center"
                 >Sale</span
@@ -193,6 +425,10 @@
     </section>
     <!-- end of collection -->
 
+    <!-- Special products -->
+    
+    <!-- end of Special products -->
+
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
@@ -201,8 +437,9 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-    <script src="./js/jquery-3.7.1.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="./jquery-3.7.1.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <script src="./main.js"></script>
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
