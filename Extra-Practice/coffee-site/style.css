@@ -95,7 +95,7 @@ html ::-webkit-scrollbar {
     width: 100%;
     height: 100vh;
 }
-#about .container {
+#about > .container {
     padding-top: 70px;
 }
 .heading {
@@ -113,7 +113,16 @@ html ::-webkit-scrollbar {
 #about .card img {
     border-radius: 10px;
 }
-
+/* #about .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+} */
+#about p {
+    font-size: 1.3rem;
+}
 #about-btn {
     width: 200px;
     height: 36px;
@@ -146,3 +155,102 @@ html ::-webkit-scrollbar {
     }
 }
 /* End About Section */
+
+/* top cards */
+#top-cards {
+    width: 100%;
+    /* height: 60vh; */
+    background: #f7f5f2;
+}
+.heading2 {
+    color: black;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+.heading2 span {
+    color: #b2744c;
+}
+#top-cards .container {
+    margin-top: 30px;
+}
+#top-cards .card {
+    border-radius: 10px;
+    transition: .5s;
+    cursor: pointer;
+}
+#top-cards .card img {
+    border-radius: 10px;
+}
+#top-cards .card:hover {
+    transform: translateY(-10px);
+}
+/* end top cards */
+
+/* menu */
+#menu {
+    margin-top: 60px;
+    width: 100%;
+}
+.heading3 {
+    text-align: center;
+    font-size: 30px;
+    color: #b2744c;
+    font-weight: bold;
+    border-bottom: 2px solid #b2744c;
+}
+.container2 {
+    margin-top: 20px;
+}
+#menu .card {
+    box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.2);
+}
+.star i {
+    color: #b2744c;
+}
+#menu h3 {
+    color: #b2744c;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 25px;
+}
+#menu p {
+    font-size: 16px;
+    color: #b2744c;
+    padding-top: 10px;
+}
+#menu p span {
+    float: right;
+
+}
+/* endmenu */
+
+/* products */
+#product {
+    width: 100%;
+}
+.heading4 {
+    text-align: center;
+    color: #b2744c;
+    font-size: 30px;
+    padding-top: 100px;
+    font-weight: bold;
+    border-bottom: 2px solid #b2744c;
+}
+#container3 {
+    margin-top: 30px;
+}
+#product h3 {
+    text-align: center;
+    color: #b2744c;
+    font-size: 23px;
+}
+#product p, span {
+    color: #b2744c;
+    padding-top: 10px;
+}
+span {
+    cursor: pointer;
+}
+/* end products */
+
