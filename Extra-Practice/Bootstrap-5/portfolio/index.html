@@ -18,9 +18,7 @@
   </head>
   <body>
     <!-- navbar -->
-    <nav
-      class="navbar navbar-expand-lg fixed-top"
-    >
+    <nav class="navbar navbar-expand-lg fixed-top">
       <div class="container flex-1">
         <a class="navbar-brand fs-4 text-white flex-0.4" href="#">Grayson.co</a>
         <button
@@ -32,7 +30,7 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon text-light"></span>
         </button>
 
         <div
@@ -83,7 +81,7 @@
     <!-- end hero Section -->
 
     <!-- practice -->
-    <section id="practice">
+    <section id="practice mb-5">
       <div class="container container-1 my-5 d-flex">
         <div class="row pt-5">
           <div class="col-md-5 ms-auto me-auto">
@@ -165,6 +163,187 @@
       </div>
     </section>
     <!-- end About -->
+
+    <!-- contact -->
+    <section id="contact" class="common py-5">
+      <div class="container">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div
+            class="col-lg-4 d-flex align-items-center justify-content-center"
+          >
+            <form>
+              <div class="row">
+                <div class="col">
+                  <label for="name"></label>Name
+                  <input
+                    type="text"
+                    name="name"
+                    class="form-control"
+                    placeholder="Name"
+                    aria-label="name"
+                  />
+                </div>
+                <div class="col">
+                  <label for="email"></label>Email
+                  <input
+                    type="text"
+                    name="email"
+                    class="form-control"
+                    placeholder="Email"
+                    aria-label="email"
+                  />
+                </div>
+              </div>
+              <div class="row my-3">
+                <div class="col">
+                  <label for="date"></label>Date
+                  <input
+                    type="date"
+                    name="date"
+                    class="form-control"
+                    aria-label="date"
+                  />
+                </div>
+                <div class="col">
+                  <label for="email"></label>Categories (Optional)
+                  <input
+                    type="text"
+                    name="category"
+                    class="form-control"
+                    placeholder="Family Law"
+                    aria-label="category"
+                  />
+                </div>
+              </div>
+              <div class="row my-3">
+                <div class="col">
+                  <label for="message">Message</label>
+                  <textarea
+                    rows="6"
+                    name="message"
+                    class="form-control"
+                  ></textarea>
+                </div>
+              </div>
+              <div class="row px-2">
+                <a href="#" class="btn btn-secondary my-3 p-3 fw-bold"
+                  >Make An Appointment</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="col-lg-8 ps-5">
+            <h4>Appointment</h4>
+            <h1>Make an Appointment</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
+              adipisci quod voluptas fuga magnam doloremque impedit minima
+              voluptatem animi ducimus minus ea ad, perferendis accusantium
+              temporibus nihil excepturi quos asperiores? Lorem ipsum dolor sit,
+              amet consectetur adipisicing elit. Impedit facere, facilis sunt,
+              ipsum nostrum enim excepturi, incidunt corporis dolorem modi
+              sapiente soluta maxime illo cupiditate? Officia et ad maxime esse!
+            </p>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque
+              corrupti, dignissimos magnam nihil quia eos id voluptate maiores,
+              suscipit aliquid ipsa. Fugit repellendus velit dicta alias error
+              odit, modi obcaecati? Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Sequi, necessitatibus quam voluptatibus sit sunt
+              itaque totam, at similique dolores eius velit? Maxime odit
+              cupiditate eaque quod nisi autem nulla beatae.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end contact -->
+
+    <!-- footer -->
+    <footer class="bg-dark py-5">
+      <div class="container">
+        <div class="row text-white">
+          <div class="col-md-3">
+            <h3 class="brand mb-3">About Me</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente
+              ad ex expedita quisquam. Eos repellendus officiis cupiditate
+              aperiam adipisci animi!
+            </p>
+            <div class="socials">
+              <img
+                src="./assets/twitter.png"
+                alt="twitter"
+                width="50"
+                class="me-2"
+              />
+              <img
+                src="./assets/facebook.png"
+                alt="facebook"
+                width="50"
+                class="me-2"
+              />
+              <img
+                src="./assets/instagram.png"
+                alt="instagram"
+                width="50"
+                class="me-2"
+              />
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <h3 class="brand mb-3">Useful Links</h3>
+            <ul style="list-style: none; padding: 0">
+              <li>Family Law</li>
+              <li>Drug Law</li>
+              <li>Insurance Law</li>
+              <li>Criminal Law</li>
+              <li>Business Law</li>
+            </ul>
+          </div>
+
+          <div class="col-md-3">
+            <h3 class="brand mb-3">Quick Links</h3>
+            <ul style="list-style: none; padding: 0">
+              <li>About Us</li>
+              <li>Practice Areas</li>
+              <li>Appointment</li>
+              <li>Terms and Conditions</li>
+              <li>FAQs</li>
+            </ul>
+          </div>
+
+          <div class="col-md-3">
+            <h3 class="brand mb-3">Contact</h3>
+            <div class="d-flex my-3 align-items-center">
+              <img
+                src="./assets/google-maps.png"
+                width="30"
+                height="30"
+                alt="maps"
+              />
+              <span class="ms-3"
+                >Lorem ipsum, dolor sit amet consectetur adipisicing.</span
+              >
+            </div>
+            <div class="d-flex my-3 align-items-center">
+              <img src="./assets/phone-call.png" width="30" alt="maps" />
+              <span class="ms-3">+91 2732321312</span>
+            </div>
+            <div class="d-flex my-3 align-items-center">
+              <img src="./assets/google-maps.png" width="30" alt="maps" />
+              <span class="ms-3">info@gmail.com</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row text-white my-5">
+          <span class="d-flex justify-content-center align-items-center">Copyrights &copy;2024 All Rights reserved | This template is made with the help of Colorlib</span>
+        </div>
+      </div>
+    </footer>
+    <!-- end footer -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script

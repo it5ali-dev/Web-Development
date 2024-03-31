@@ -54,7 +54,11 @@
 /* about */
 #about {
     height: 100vh;
-    background-color: rgba(242, 242, 242, 0.6);
+    background-color: rgba(247, 247, 247, 0.6);
+}
+.common {
+    height: 80vh;
+    background-color: rgba(236, 232, 232, 0.6);
 }
 #about .about-img {
     height: 100vh;
@@ -62,5 +66,16 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+/* footer */
+.socials img {
+    background-color: white;
+    border-radius: 50%;
+    transition: all .5s;
+}
+.socials img:hover {
+    transform: rotateZ(360deg);
+    cursor: pointer;
 }
 
