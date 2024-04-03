@@ -1,0 +1,12 @@
+/* navbar */
+nav .container {
+    height: 40px !important;
+    overflow: visible;
+}
+#explained {
+    background-color: rgb(242, 242, 242) !important;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
