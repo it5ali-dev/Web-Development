@@ -5,7 +5,6 @@ nav .container {
 }
 #explained {
     background-color: rgb(242, 242, 242) !important;
-    height: 40vh;
     display: flex;
     justify-content: center;
     align-items: center;
