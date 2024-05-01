@@ -87,19 +87,36 @@ document.getElementById('mypara2').textContent = `your email is: ${email}`;
 // age += 1;
 // console.log(`you are ${age} years old: `, typeof(age));
 
-let x = 'pizza';
-let y = 'pizza';
-let z = 'pizza';
+// let x = 'pizza';
+// let y = 'pizza';
+// let z = 'pizza';
 
-x = Number(x);
-y = String(y);
-z = Boolean(z);
+// x = Number(x);
+// y = String(y);
+// z = Boolean(z);
 
-console.log(x, typeof(x));
-console.log(y, typeof(y));
-console.log(z, typeof(z));
+// console.log(x, typeof(x));
+// console.log(y, typeof(y));
+// console.log(z, typeof(z));
 
+// ============================================
 
+// ============================================
+
+const PI = 3.14159;
+let radius;
+let circumference;
+
+// radius = window.prompt("Enter radius of circle?");
+// radius = Number(radius);
+// console.log(circumference);
+
+document.getElementById('mysubmit').onclick = function() {
+    radius = document.getElementById('mytext').value;
+    radius = Number(radius);
+    circumference = 2 * PI * radius;
+    document.getElementById('newtext').textContent = circumference + "cm";
+}
 
 // ============================================
 
