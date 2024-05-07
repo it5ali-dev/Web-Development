@@ -103,20 +103,83 @@ document.getElementById('mypara2').textContent = `your email is: ${email}`;
 
 // ============================================
 
-const PI = 3.14159;
-let radius;
-let circumference;
+// const PI = 3.14159;
+// let radius;
+// let circumference;
 
-// radius = window.prompt("Enter radius of circle?");
-// radius = Number(radius);
-// console.log(circumference);
+// // radius = window.prompt("Enter radius of circle?");
+// // radius = Number(radius);
+// // console.log(circumference);
 
-document.getElementById('mysubmit').onclick = function() {
-    radius = document.getElementById('mytext').value;
-    radius = Number(radius);
-    circumference = 2 * PI * radius;
-    document.getElementById('newtext').textContent = circumference + "cm";
+// document.getElementById('mysubmit').onclick = function() {
+//     radius = document.getElementById('mytext').value;
+//     radius = Number(radius);
+//     circumference = 2 * PI * radius;
+//     document.getElementById('newtext').textContent = circumference + "cm";
+// }
+
+// ============================================
+
+// ============================================
+
+// let x = 3.32;
+// let y = 2.2;
+
+// let z = x*y;
+
+// console.log(z);
+// console.log(Math.round(z));
+// console.log(Math.floor(z));
+// console.log(Math.ceil(z));
+// console.log(Math.trunc(z));
+// console.log(Math.log(z));
+// console.log(Math.sign(z)); // for positive (1), zero for 0, and -1 for negative
+// // console.log(Math.sin(z)); // work with radian value
+// // console.log(Math.cos(z)); // work with radian value
+// // console.log(Math.tan(z)); // work with radian value
+// console.log(Math.pow(x, y));
+// console.log(Math.max(x, y, z));
+// console.log(Math.min(x, y, z));
+
+// ============================================
+
+// ============================================
+
+// function showAge() {
+//     let age = document.getElementById('mytext').value;
+//     age = Number(age);
+//     if (age >= 18) {
+//         document.getElementById('newtext').textContent = "You are allowed to enter this site.";
+//     } else {
+//         document.getElementById('newtext').textContent = "You must be 18+ to enter this site.";
+//     }
+//     // Clear the input field
+//     document.getElementById('mytext').value = '';
+// }
+
+// ============================================
+
+// ============================================
+
+let mysubmit = document.getElementById('mysubmit');
+
+mysubmit.onclick = function() {
+    // Retrieve the current value of the input field inside the click event handler
+    let age = document.getElementById('mytext').value;
+    age = Number(age); // Convert the value to a number
+
+    // Use the current value of age to determine the message
+    let message = age >= 18 ? "You are an adult" : "You are a minor";
+    
+    // Update the message displayed in the 'newtext' element
+    document.getElementById('newtext').textContent = message;
+    
+    // Clear the input field
+    document.getElementById('mytext').value = '';
 }
+
+
+// ============================================
 
 // ============================================
 
