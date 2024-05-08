@@ -161,25 +161,40 @@ document.getElementById('mypara2').textContent = `your email is: ${email}`;
 
 // ============================================
 
-let mysubmit = document.getElementById('mysubmit');
+// let mysubmit = document.getElementById('mysubmit');
 
-mysubmit.onclick = function() {
+// mysubmit.onclick = function() {
     // Retrieve the current value of the input field inside the click event handler
-    let age = document.getElementById('mytext').value;
-    age = Number(age); // Convert the value to a number
-
+    // let name = document.getElementById('mytext').value;
     // Use the current value of age to determine the message
-    let message = age >= 18 ? "You are an adult" : "You are a minor";
     
     // Update the message displayed in the 'newtext' element
-    document.getElementById('newtext').textContent = message;
+    // document.getElementById('newtext').textContent = `Your name is: ${name.charAt(0)}`;
+    // document.getElementById('newtext').textContent = `Your name is: ${name.length}`;
+    // document.getElementById('newtext').textContent = `Your name is: ${name.trim()}`; // to avoid spaces before and after the string entered
+    // document.getElementById('newtext').textContent = `Your name is: ${name.toUpperCase()}`; // make my entered string upper case
+    // document.getElementById('newtext').textContent = `Your name is: ${name.repeat(2)}`; // make my entered string lower case
+
+    // let result = name.startsWith(" ");
+    // document.getElementById('newtext').textContent = `your entered string starts with ' ': ${result}`; // make my entered string upper case
+    // let result = name.endsWith(" ");
+    // document.getElementById('newtext').textContent = `your entered string starts with ' ': ${result}`; // make my entered string upper case
     
+    // document.getElementById('newtext').textContent = `your string includes ' ': ${name.includes(" ")}`; 
+
     // Clear the input field
-    document.getElementById('mytext').value = '';
-}
+    // document.getElementById('mytext').value = '';
+// }
 
 
 // ============================================
+
+// ============================================
+
+let phoneNumber = '123-456-7890';
+phoneNumber = phoneNumber.padStart(15, '+92-');
+phoneNumber = phoneNumber.replaceAll('-', '');
+console.log(phoneNumber);
 
 // ============================================
 
