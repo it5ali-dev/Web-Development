@@ -164,26 +164,26 @@ document.getElementById('mypara2').textContent = `your email is: ${email}`;
 // let mysubmit = document.getElementById('mysubmit');
 
 // mysubmit.onclick = function() {
-    // Retrieve the current value of the input field inside the click event handler
-    // let name = document.getElementById('mytext').value;
-    // Use the current value of age to determine the message
-    
-    // Update the message displayed in the 'newtext' element
-    // document.getElementById('newtext').textContent = `Your name is: ${name.charAt(0)}`;
-    // document.getElementById('newtext').textContent = `Your name is: ${name.length}`;
-    // document.getElementById('newtext').textContent = `Your name is: ${name.trim()}`; // to avoid spaces before and after the string entered
-    // document.getElementById('newtext').textContent = `Your name is: ${name.toUpperCase()}`; // make my entered string upper case
-    // document.getElementById('newtext').textContent = `Your name is: ${name.repeat(2)}`; // make my entered string lower case
+// Retrieve the current value of the input field inside the click event handler
+// let name = document.getElementById('mytext').value;
+// Use the current value of age to determine the message
 
-    // let result = name.startsWith(" ");
-    // document.getElementById('newtext').textContent = `your entered string starts with ' ': ${result}`; // make my entered string upper case
-    // let result = name.endsWith(" ");
-    // document.getElementById('newtext').textContent = `your entered string starts with ' ': ${result}`; // make my entered string upper case
-    
-    // document.getElementById('newtext').textContent = `your string includes ' ': ${name.includes(" ")}`; 
+// Update the message displayed in the 'newtext' element
+// document.getElementById('newtext').textContent = `Your name is: ${name.charAt(0)}`;
+// document.getElementById('newtext').textContent = `Your name is: ${name.length}`;
+// document.getElementById('newtext').textContent = `Your name is: ${name.trim()}`; // to avoid spaces before and after the string entered
+// document.getElementById('newtext').textContent = `Your name is: ${name.toUpperCase()}`; // make my entered string upper case
+// document.getElementById('newtext').textContent = `Your name is: ${name.repeat(2)}`; // make my entered string lower case
 
-    // Clear the input field
-    // document.getElementById('mytext').value = '';
+// let result = name.startsWith(" ");
+// document.getElementById('newtext').textContent = `your entered string starts with ' ': ${result}`; // make my entered string upper case
+// let result = name.endsWith(" ");
+// document.getElementById('newtext').textContent = `your entered string starts with ' ': ${result}`; // make my entered string upper case
+
+// document.getElementById('newtext').textContent = `your string includes ' ': ${name.includes(" ")}`; 
+
+// Clear the input field
+// document.getElementById('mytext').value = '';
 // }
 
 
@@ -191,10 +191,69 @@ document.getElementById('mypara2').textContent = `your email is: ${email}`;
 
 // ============================================
 
-let phoneNumber = '123-456-7890';
-phoneNumber = phoneNumber.padStart(15, '+92-');
-phoneNumber = phoneNumber.replaceAll('-', '');
-console.log(phoneNumber);
+// let phoneNumber = '123-456-7890';
+// phoneNumber = phoneNumber.padStart(15, '+92-');
+// phoneNumber = phoneNumber.replaceAll('-', '');
+// console.log(phoneNumber);
 
+// ============================================
+
+// ============================================
+
+// const fullName = 'Ali Hassan';
+// // let firstName = fullName.slice(0,3);
+// // let lastName = fullName.slice(4);
+// let firstName = fullName.slice(0,fullName.indexOf(' '));
+// let lastName = fullName.slice(fullName.indexOf(' ')+1);
+// // let firstCharacter = fullName.slice(0, 1);
+// // let lastCharacter = fullName.slice(-4); // display name's last 5 characters
+
+// // console.log(firstCharacter);
+// // console.log(lastCharacter);
+// console.log(firstName);
+// console.log(lastName);
+
+// ============================================
+
+// ============================================
+
+// let email = 'alihassan@gmail.com';
+// let username = email.slice(0, email.indexOf('@'));
+// let extension = email.slice(email.indexOf('@') + 1);
+// console.log(username);
+// console.log(extension);
+
+// ============================================
+
+// ============================================
+
+// ============================================
+
+// No Method chaining
+// let mybutton = document.getElementById('submit');
+// mybutton.onclick = function () {
+//     let username = document.getElementById('mytext').value;
+//     username = username.trim();
+//     let letter = username.charAt(0);
+//     letter = letter.toUpperCase();
+//     let extraChar = username.slice(1);
+//     extraChar = extraChar.toLowerCase();
+//     username = letter + extraChar;
+//     console.log(username);
+//     document.getElementById('newtext').textContent = username;
+// }
+
+// Method chaining
+let mybutton = document.getElementById('submit');
+mybutton.onclick = function () {
+    let username = document.getElementById('mytext').value;
+    username = username.trim().charAt(0).toUpperCase() + username.trim().slice(1).toLowerCase();
+    
+    console.log(username);
+    document.getElementById('newtext').textContent = username;
+}
+
+
+// ============================================
 // ============================================
 
