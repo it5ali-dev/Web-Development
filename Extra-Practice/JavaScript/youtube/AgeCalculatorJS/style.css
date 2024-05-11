@@ -1,0 +1,11 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(202, 255, 255);
+}
+.hero {
+    min-width: 30rem;
+    background-color: rgb(134, 208, 213);
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px 2px;
+}
