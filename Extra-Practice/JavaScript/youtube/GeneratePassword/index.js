@@ -32,8 +32,8 @@ generate.onclick = function () {
 
     console.log(`allowed character length : ${allowedChar}`);
 
-    if (passwordLen <= 0 || passwordLen === '') {
-        newText.textContent = 'Password length must be at least 1'; // Display error message
+    if (passwordLen < 4 || passwordLen === '') {
+        newText.textContent = 'Password length must be at least 4'; // Display error message
     }
     else if (allowedChar.length === 0) { // Correct condition to check if allowedChar is empty
         newText.textContent = 'At least 1 set of characters needs to be selected'; // Display error message
