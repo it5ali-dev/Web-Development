@@ -244,16 +244,66 @@ document.getElementById('mypara2').textContent = `your email is: ${email}`;
 // }
 
 // Method chaining
-let mybutton = document.getElementById('submit');
-mybutton.onclick = function () {
-    let username = document.getElementById('mytext').value;
-    username = username.trim().charAt(0).toUpperCase() + username.trim().slice(1).toLowerCase();
+// let mybutton = document.getElementById('submit');
+// mybutton.onclick = function () {
+//     let username = document.getElementById('mytext').value;
+//     username = username.trim().charAt(0).toUpperCase() + username.trim().slice(1).toLowerCase();
     
-    console.log(username);
-    document.getElementById('newtext').textContent = username;
-}
-
+//     console.log(username);
+//     document.getElementById('newtext').textContent = username;
+// }
 
 // ============================================
+
+// ============================================
+
+// foreach Method
+// let number = [1,2,3,4,5,6]
+
+// function display(element) {
+//     console.log(element);
+// }
+
+// function double(element, index, array) {
+//     array[index] = element*2
+// }
+
+// function tripple(element, index, array) {
+//     array[index] = element*3
+// }
+
+// function square(element, index, array) {
+//     // array[index] = element*element
+//     array[index] = Math.pow(element, 2)
+// }
+
+// number.forEach(square)
+// number.forEach(display)
+// display(number)
+
+let fruits = ['apple','orange','banana','coconut']
+
+function upperCase(element, index, array) {
+    array[index] = element.toUpperCase()
+    display(array[index])
+}
+
+function lowerCase(element, index, array) {
+    array[index] = element.toLowerCase()
+    display(array[index])
+}
+
+function Capitalize(element, index, array) {
+    array[index] = element.charAt(0).toUpperCase() + element.slice(1)
+    display(array[index])
+}
+
+function display(element) {
+    console.log(element);
+}
+
+fruits.forEach(Capitalize)
+
+
 // ============================================
 
