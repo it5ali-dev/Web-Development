@@ -37,28 +37,358 @@
 // ========================================
 // Contructors
 
-function Car(make, model, year, color) {
-    this.make = make,
-    this.model = model,
-    this.year = year,
-    this.color = color,
-    this.drive = function() {
-        console.log(`you drive the ${this.model}`);
+// function Car(make, model, year, color) {
+//     this.make = make,
+//     this.model = model,
+//     this.year = year,
+//     this.color = color,
+//     this.drive = function() {
+//         console.log(`you drive the ${this.model}`);
+//     }
+// }
+
+// const car1 = new Car('fort', 'Mustang', 2023, 'black')
+// const car2 = new Car('Chevrolet', 'Camaro', 2024, 'blue')
+// const car3 = new Car('Dodge', 'Charger', 2023, 'white')
+
+// console.log(car1);
+// car1.drive()
+// console.log(car2);
+// car2.drive()
+// console.log(car3);
+// car3.drive()
+
+// function Product(name, price) {
+//     this.name = name
+//     this.price = price
+
+//     this.display = function() {
+//         console.log(`Product : ${this.name}`);
+//         console.log(`Price : $${this.price.toFixed(2)}`);
+//     }
+
+//     this.total = function(salesTax) {
+//         return this.price + (this.price * salesTax
+//         )
+//     }
+// }
+
+// const salesTax = 0.05
+
+// const product1 = new Product('shirt', 19.99)
+// const product2 = new Product('pants', 29.99)
+// const product3 = new Product('underware', 49.99)
+
+// product1.display()
+// product1.total(salesTax)
+// product2.display()
+// product2.total(salesTax)
+// product3.display()
+// product3.total(salesTax)
+
+
+// ========================================
+
+// ========================================
+// class in js
+
+// class Products {
+//     constructor(name, price) {
+//         this.name = name
+//         this.price = price
+//     }
+//     // inside of class we don't need to write function keyword with functions
+//     displayProduct() {
+//         console.log(`Product: ${this.name}`);
+//         console.log(`Price: $${this.price.toFixed(2)}`);
+//     }
+
+//     total(saleTax) {
+//         return this.price + (this.price * saleTax)
+//     }
+// }
+
+// const salesTax = 0.05
+
+// const product1 = new Products('shirt', 19.99)
+// const product2 = new Products('pants', 29.99)
+// const product3 = new Products('underwear', 49.99)
+
+// product1.displayProduct()
+// console.log(`total price (with tax): ${product1.total(salesTax)}`);
+
+// product2.displayProduct()
+// console.log(`total price (with tax): ${product2.total(salesTax)}`);
+
+// product3.displayProduct()
+// console.log(`total price (with tax): ${product3.total(salesTax)}`);
+
+// ========================================
+
+// ========================================
+// static Keyword
+
+// class MathUtil {
+//     // static keyword
+//     static PI = 3.14159
+
+//     // static Method
+//     static diameter(radius) {
+//         return radius * 2
+//     }
+//     static getCircumference(radius) {
+//         return radius * 2 * this.PI
+//     }
+//     static getArea(radius) {
+//         return radius * radius * this.PI
+//     }
+// }
+
+// console.log(MathUtil.PI);
+// console.log(MathUtil.diameter(5));
+// console.log(MathUtil.getCircumference(5));
+// console.log(MathUtil.getArea(5));
+
+// class User {
+//     static userCount = 0
+//     constructor(userName) {
+//         this.userName = userName
+//         User.userCount++
+//     }
+
+//     static getUserCount() {
+//         console.log(`there are ${User.userCount} users online`);
+//     }
+
+//     sayHello() {
+//         console.log(`Hello, my username is : ${this.userName}`);
+//     }
+// }
+
+// const user1 = new User('ali')
+// const user2 = new User('hassan')
+
+// console.log(user1.userName);
+// user1.sayHello();
+
+// console.log(user2.userName);
+// user2.sayHello();
+
+// console.log(User.getUserCount());
+
+// ========================================
+
+// ========================================
+
+// class Animal {
+//     alive = true
+
+//     eat() { 
+//         console.log(`this ${this.name} is eating`);
+//     }
+//     sleep() { 
+//         console.log(`this ${this.name} is sleeping`);
+//     }
+// }
+
+// class Rabbit extends Animal {
+//     name = 'rabbit'
+//     run() {
+//         console.log(`this ${this.name} is running`);
+//     }
+// }
+
+// class Fish extends Animal {
+//     name = 'fish'
+//     swim() {
+//         console.log(`this ${this.name} is swimming`);
+//     }
+// }
+
+// class Hawk extends Animal {
+//     name = 'hawk'
+//     fly() {
+//         console.log(`this ${this.name} is flying`);
+//     }
+// }
+
+// const rabbit = new Rabbit()
+// const fish = new Fish()
+// const hawk = new Hawk()
+
+// rabbit.alive = false
+// console.log(rabbit.alive);
+// rabbit.eat()
+// rabbit.sleep()
+
+// rabbit.run()
+// fish.swim()
+// hawk.fly()
+
+// ========================================
+
+// ========================================
+// Super Keywords
+
+// class Animal {
+//     constructor(name, age) {
+//         this.name = name
+//         this.age = age
+//     }
+//     move(speed) {
+//         console.log(`the ${this.name} moves at a speed of ${speed} mph`);
+//     }
+// }
+// class Rabbit extends Animal {
+//     constructor(name, age, runSpeed) {
+//         super(name, age)
+//         this.runSpeed = runSpeed
+//     }
+//     run() {
+//         console.log(`the ${this.name} can run`);
+//         super.move(this.runSpeed)
+//     }
+// }
+// class Fish extends Animal {
+//     constructor(name, age, swimSpeed) {
+//         super(name, age)
+//         this.swimSpeed = swimSpeed
+//     }
+//     swim() {
+//         console.log(`the ${this.name} can swim`);
+//         super.move(this.swimSpeed)
+//     }
+// }
+// class Hawk extends Animal {
+//     constructor(name, age, flySpeed) {
+//         super(name, age)
+//         this.flySpeed = flySpeed
+//     }
+//     fly() {
+//         console.log(`the ${this.name} can fly`);
+//         super.move(this.flySpeed)
+//     }
+// }
+
+// const rabbit = new Rabbit('rabbit', 2, 25)
+// const fish = new Fish('fish', 0.8, 12)
+// const hawk = new Hawk('hawk', 1.5, 79)
+
+// console.log(rabbit);
+// console.log(fish);
+// console.log(hawk);
+
+// // rabbit.move(rabbit.runSpeed)
+// rabbit.run();
+
+// // fish.move(fish.swimSpeed)
+// fish.swim();
+
+// // hawk.move(hawk.flySpeed)
+// hawk.fly();
+
+// ========================================
+
+// ========================================
+// getter and setter
+
+// class Rectangle {
+//     constructor(width, height) {
+//         this.width = width
+//         this.height = height
+//     }
+
+//     // setters
+//     set width(newWidth) {
+//         if(newWidth > 0) {
+//             this._width = newWidth
+//         } else {
+//             console.error('Width must be Positive number');
+//         }
+//     }
+//     set height(newHeight) {
+//         if(newHeight > 0) {
+//             this._height = newHeight
+//         } else {
+//             console.error('Height must be Positive number');
+//         }
+//     }
+
+//     // getters
+//     get width() {
+//         return this._width
+//     }
+//     get height() {
+//         return this._height
+//     }
+
+//     get area() {
+//         return this._height * this._width
+//     }
+// }
+
+// const rectangle = new Rectangle(3, 4)
+
+// console.log(rectangle);
+// console.log(rectangle.area);
+
+class Person {
+    constructor(fName, lName, age) {
+        this.fName = fName
+        this.lName = lName
+        this.age = age
+    }
+    
+    // here at setter function Name Must Be Same as of Class Attribute
+    set fName(newFName) {
+        if(typeof newFName === 'string' && newFName.length > 0) {
+            // below both experssions would work
+            this._firstName = newFName
+            // this._fName = newFName
+        } else {
+            console.error('Wrong data type. it must be String')
+        }
+    }
+    set lName(newLName) {
+        if(typeof newLName === 'string' && newLName.length > 0) {
+            this._lastName = newLName
+        } else {
+            console.error('Wrong data type. it must be String')
+        }
+    }
+    set age(newAge) {
+        if(typeof newAge === 'number' && newAge >= 0) {
+            this._age = newAge
+        } else {
+            console.error('Wrong data type. it must be integer')
+        }
+    }
+
+    // getters
+    // Here getter function name shuold also be same as of attribute
+    get fName() {
+        return this._firstName
+    }
+    get lName() {
+        return this._lastName
+    }
+    get age() {
+        return this._age
+    }
+    get fullName() {
+        return this._firstName + " " + this._lastName
     }
 }
 
-const car1 = new Car('fort', 'Mustang', 2023, 'black')
-const car2 = new Car('Chevrolet', 'Camaro', 2024, 'blue')
-const car3 = new Car('Dodge', 'Charger', 2023, 'white')
+let person1 = new Person("ali", 'hassan', 20)
 
-console.log(car1);
-car1.drive()
-console.log(car2);
-car2.drive()
-console.log(car3);
-car3.drive()
+// console.log(typeof(person1.fName));
+console.log(person1.fName);
+console.log(person1.lName);
+console.log(person1.fullName);
+console.log(person1.age);
 
-
+// ========================================
 // ========================================
 // ========================================
 
