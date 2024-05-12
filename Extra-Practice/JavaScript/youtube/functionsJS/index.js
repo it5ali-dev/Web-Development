@@ -52,24 +52,76 @@
 // =======================================
 
 // const number = [1,2,3,4,5]
+
 // const numSquare = number.map(square)
 
 // console.log(numSquare);
 
 // function square(element) {
+    //     return Math.pow(element, 2)
+    // }
+    
+    // Alternate of above
+    // const number = [1, 2, 3, 4, 5, 6]
+    // const numSquare = number.map(function (element) {
 //     return Math.pow(element, 2)
+// })
+
+// const isEven = number.filter(function(e) {
+    //     return e%2 === 0
+    // })
+    
+    // console.log(isEven);
+
+// =======================================
+
+// =======================================
+// Arrow Function
+
+// let name = 'Ali'
+// let age = 12
+// const hello = (name, age) => {
+//     console.log(`hello ${name}`);
+//     console.log(`you are ${age} years old`);
 // }
 
-// Alternate of above
-const number = [1, 2, 3, 4, 5, 6]
-const numSquare = number.map(function (element) {
+// hello(name, age); 
+
+// setTimeout(() => {
+//    console.log('Hello'); 
+// }, 3000);
+
+const numbers = [1,2,3,4,5,6]
+
+const squares = numbers.map((element) => {
     return Math.pow(element, 2)
 })
 
-const isEven = number.filter(function(e) {
-    return e%2 === 0
+const cube = numbers.map((element) => {
+    return Math.pow(element, 3)
 })
 
+const isEven = squares.filter((element) => {
+    return element%2 === 0
+})
+
+const isOdd = squares.filter((element) => {
+    return element%2 !== 0
+})
+
+const total = numbers.reduce((previous, next) => {
+    return previous + next
+})
+
+console.log(numbers);
+console.log(squares);
+console.log(cube);
 console.log(isEven);
+console.log(isOdd);
+console.log(total);
 
+// =======================================
+// =======================================
 
+    
+    
