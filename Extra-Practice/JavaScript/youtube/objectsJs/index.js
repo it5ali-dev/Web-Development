@@ -332,61 +332,189 @@
 // console.log(rectangle);
 // console.log(rectangle.area);
 
-class Person {
-    constructor(fName, lName, age) {
-        this.fName = fName
-        this.lName = lName
-        this.age = age
-    }
+// class Person {
+//     constructor(fName, lName, age) {
+//         this.fName = fName
+//         this.lName = lName
+//         this.age = age
+//     }
     
-    // here at setter function Name Must Be Same as of Class Attribute
-    set fName(newFName) {
-        if(typeof newFName === 'string' && newFName.length > 0) {
-            // below both experssions would work
-            this._firstName = newFName
-            // this._fName = newFName
-        } else {
-            console.error('Wrong data type. it must be String')
-        }
-    }
-    set lName(newLName) {
-        if(typeof newLName === 'string' && newLName.length > 0) {
-            this._lastName = newLName
-        } else {
-            console.error('Wrong data type. it must be String')
-        }
-    }
-    set age(newAge) {
-        if(typeof newAge === 'number' && newAge >= 0) {
-            this._age = newAge
-        } else {
-            console.error('Wrong data type. it must be integer')
-        }
-    }
+//     // here at setter function Name Must Be Same as of Class Attribute
+//     set fName(newFName) {
+//         if(typeof newFName === 'string' && newFName.length > 0) {
+//             // below both experssions would work
+//             this._firstName = newFName
+//             // this._fName = newFName
+//         } else {
+//             console.error('Wrong data type. it must be String')
+//         }
+//     }
+//     set lName(newLName) {
+//         if(typeof newLName === 'string' && newLName.length > 0) {
+//             this._lastName = newLName
+//         } else {
+//             console.error('Wrong data type. it must be String')
+//         }
+//     }
+//     set age(newAge) {
+//         if(typeof newAge === 'number' && newAge >= 0) {
+//             this._age = newAge
+//         } else {
+//             console.error('Wrong data type. it must be integer')
+//         }
+//     }
 
-    // getters
-    // Here getter function name shuold also be same as of attribute
-    get fName() {
-        return this._firstName
-    }
-    get lName() {
-        return this._lastName
-    }
-    get age() {
-        return this._age
-    }
-    get fullName() {
-        return this._firstName + " " + this._lastName
+//     // getters
+//     // Here getter function name shuold also be same as of attribute
+//     get fName() {
+//         return this._firstName
+//     }
+//     get lName() {
+//         return this._lastName
+//     }
+//     get age() {
+//         return this._age
+//     }
+//     get fullName() {
+//         return this._firstName + " " + this._lastName
+//     }
+// }
+
+// let person1 = new Person("ali", 'hassan', 20)
+
+// // console.log(typeof(person1.fName));
+// console.log(person1.fName);
+// console.log(person1.lName);
+// console.log(person1.fullName);
+// console.log(person1.age);
+
+// ========================================
+
+// ========================================
+// Destructuring
+
+// Swap the value of two variables
+
+// let a=1
+// let b=2
+// console.log(`Before Destructuring: a is ${a} and b is ${b}`);
+// [a, b] = [b, a]
+// console.log(`After Destructuring: a is ${a} and b is ${b}`);
+
+// Swap 2 elements in an array
+// const colors = ['red','green','blue','black','white']
+// console.log(`Before destructuring \n${colors}`);
+
+// [colors[0], colors[4]] = [colors[4], colors[0]]
+
+// console.log(`After destructuring \n${colors}`);
+
+// assign array elements to variables
+// const colors = ['red','green','blue','black','white']
+// // const [firstColor, secondColor, thirdColor, fourthColor, fifthColor] = colors
+// // Below rest operator is used that combines the elements on a single array
+// const [firstColor, secondColor, thirdColor, ...extraColors] = colors
+
+// console.log(firstColor);
+// console.log(secondColor);
+// console.log(thirdColor);
+// console.log(extraColors);
+
+// extract values from objects
+// const person1 = {
+//     fName: 'Ali',
+//     lName: 'Hassan',
+//     age: 20,
+//     job: 'Frontend Dev',
+// }
+// const person2 = {
+//     fName: 'Hassan',
+//     lName: 'Ali',
+//     age: 22,
+// }
+// Here destructuring variable name must be same as of attributes
+// const {fName, lName, age, job} = person1
+// console.log(fName);
+// console.log(lName);
+// console.log(age);
+// console.log(job);
+// console.log('=========================');
+// const {fName: firstName, lName: lastName, age: myAge, job: myJob = 'unEmployeed'} = person2;
+// console.log(firstName);
+// console.log(lastName);
+// console.log(myAge);
+// console.log(myJob);
+
+// destructure in function Parameters
+// function displayPerson({fName, lName, age, job='unemployeed'}) {
+//     console.log(`name: ${fName} ${lName}`);
+//     console.log(`age: ${age}`);
+//     console.log(`job: ${job}`);
+// }
+
+// displayPerson(person1)
+// displayPerson(person2)
+
+// ========================================
+
+// ========================================
+// nested Objects
+// const person = {
+//     fullName: "Ali Hassan",
+//     age: 30,
+//     isStudent: true,
+//     hobbies: ['karate','jellyfishing','cooking'],
+//     address: {
+//         street: '123 conch st.',
+//         city: 'sialkot',
+//         country: 'Pakistan',
+//     }
+// }
+
+// console.log(person.fullName);
+// console.log(person.age);
+// console.log(person.isStudent);
+// console.log(person.hobbies);
+
+// for(let property in person.address) {
+//     console.log(person.address[property]);
+// }
+
+// console.log(person.address.country);
+// console.log(person.address.city);
+// console.log(person.address.street);
+
+class Address {
+    constructor(street, city, country) {
+        this.street = street
+        this.city = city
+        this.country = country
     }
 }
 
-let person1 = new Person("ali", 'hassan', 20)
+class Person {
+    constructor(name, age, ...address) {
+        this.name = name
+        this.age = age
+        this.address = new Address(...address)
+    }
+}
 
-// console.log(typeof(person1.fName));
-console.log(person1.fName);
-console.log(person1.lName);
-console.log(person1.fullName);
+const person1 = new Person('ali', 30, 'fateh', 'sialkot', 'pakistan')
+const person2 = new Person('hassan', 20, 'garh', 'sialkot', 'pakistan')
+const person3 = new Person('ali hassan', 50, 'fateh garh', 'sialkot', 'pakistan')
+
+console.log(person1.name);
 console.log(person1.age);
+console.log(person1.address);
+
+console.log(person2.name);
+console.log(person2.age);
+console.log(person2.address);
+
+console.log(person3.name);
+console.log(person3.age);
+console.log(person3.address);
 
 // ========================================
 // ========================================
