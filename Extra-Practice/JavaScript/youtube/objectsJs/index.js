@@ -338,7 +338,7 @@
 //         this.lName = lName
 //         this.age = age
 //     }
-    
+
 //     // here at setter function Name Must Be Same as of Class Attribute
 //     set fName(newFName) {
 //         if(typeof newFName === 'string' && newFName.length > 0) {
@@ -625,19 +625,119 @@
 // ========================================
 // shuffle an array
 // cards.sort(() => Math.random() - 0.5)
-const cards = ['A', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K'];
+// const cards = ['A', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K'];
 
-function shuffle(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const rand = Math.floor(Math.random() * (i + 1));
-        [array[i], array[rand]] = [array[rand], array[i]];
-    }
-    return array; // Return the shuffled array
+// function shuffle(array) {
+//     for (let i = array.length - 1; i > 0; i--) {
+//         const rand = Math.floor(Math.random() * (i + 1));
+//         [array[i], array[rand]] = [array[rand], array[i]];
+//     }
+//     return array; // Return the shuffled array
+// }
+
+// console.log("Original array:", cards);
+// const shuffledCards = shuffle(cards);
+// console.log("Shuffled array:", shuffledCards);
+
+// ========================================
+
+// ========================================
+// Dates 
+// const date = new Date()
+
+// let year = date.getFullYear()
+// let month = date.getMonth()
+// let now = date.getDate()
+// let hour = date.getHours()
+// let minute = date.getMinutes()
+// let sec = date.getSeconds()
+// let day = date.getDay()
+
+// console.log(year, month+1, now, hour, minute, sec, day);
+
+// const date1 = new Date('2023-12-31')
+// const date2 = new Date('2024-01-01')
+
+// if(date2 > date1) {
+//     console.log("Happy New Year!");
+// }
+
+// ========================================
+
+// ========================================
+// Closures
+// Closure means a function inside another function, the inner function can access the variables and scope of the outer function
+
+// function outer() {
+//     let message = 'hello Outer'
+//     function inner() {
+//         console.log(message, 'from inner');
+//     }
+//     inner()
+// }
+
+// outer()
+
+// function createCounter() {
+//     let count=0
+//     function increment() {
+//         count++;
+//         console.log(`count increased to ${count}`);
+//     }
+//     function getCount() {
+//         return count
+//     }
+//     return {increment, getCount}
+// }
+// const counter = createCounter()
+// counter.increment()
+// counter.increment()
+// console.log(counter.getCount());
+
+// function createGame() {
+//     let score = 0
+//     function increaseScore(points) {
+//         score += points
+//         console.log(`+${points}pts`);
+//     }
+//     function decreaseScore(points) {
+//         score -= points
+//         console.log(`-${points}pts`);
+//     }
+
+//     function getScore() {
+//         return score
+//     }
+//     return {increaseScore, decreaseScore, getScore}
+// }
+
+// let game = createGame()
+
+// game.increaseScore(5)
+// game.increaseScore(6)
+// game.decreaseScore(4)
+// console.log(`Final score: ${game.getScore()}pts`);
+
+// ========================================
+
+// ========================================
+// setTimeout Method
+
+// const timeOutId = setTimeout(() => {
+//     window.alert('hello')
+// }, 3000);
+// clearTimeout(timeOutId)
+
+let timeId;
+function startTimer() {
+    timeId = setTimeout(() => {
+        window.alert('Hello')
+    }, 3000);
 }
 
-console.log("Original array:", cards);
-const shuffledCards = shuffle(cards);
-console.log("Shuffled array:", shuffledCards);
+function clearTimer() {
+    clearTimeout(timeId)
+}
 
 // ========================================
 // ========================================
