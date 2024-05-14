@@ -35,7 +35,8 @@
 // ========================================
 
 // ========================================
-// Contructors
+// Contructors function
+// ========================================
 
 // function Car(make, model, year, color) {
 //     this.make = make,
@@ -68,8 +69,7 @@
 //     }
 
 //     this.total = function(salesTax) {
-//         return this.price + (this.price * salesTax
-//         )
+//         return this.price + (this.price * salesTax)
 //     }
 // }
 
@@ -91,8 +91,10 @@
 
 // ========================================
 // class in js
+// ========================================
 
 // class Products {
+//     // constructor
 //     constructor(name, price) {
 //         this.name = name
 //         this.price = price
@@ -127,6 +129,7 @@
 
 // ========================================
 // static Keyword
+// ========================================
 
 // class MathUtil {
 //     // static keyword
@@ -169,6 +172,8 @@
 // const user2 = new User('hassan')
 
 // console.log(user1.userName);
+// console.log(User.userCount);
+// // User.getUserCount();
 // user1.sayHello();
 
 // console.log(user2.userName);
@@ -178,6 +183,8 @@
 
 // ========================================
 
+// ========================================
+// inheritance
 // ========================================
 
 // class Animal {
@@ -229,6 +236,7 @@
 
 // ========================================
 // Super Keywords
+// ========================================
 
 // class Animal {
 //     constructor(name, age) {
@@ -291,6 +299,7 @@
 
 // ========================================
 // getter and setter
+// ========================================
 
 // class Rectangle {
 //     constructor(width, height) {
@@ -323,7 +332,7 @@
 //     }
 
 //     get area() {
-//         return this._height * this._width
+//         return this.width * this.height
 //     }
 // }
 
@@ -331,6 +340,8 @@
 
 // console.log(rectangle);
 // console.log(rectangle.area);
+
+// -------------------------------------------
 
 // class Person {
 //     constructor(fName, lName, age) {
@@ -376,7 +387,7 @@
 //         return this._age
 //     }
 //     get fullName() {
-//         return this._firstName + " " + this._lastName
+//         return this.fName + " " + this.lName
 //     }
 // }
 
@@ -392,26 +403,32 @@
 
 // ========================================
 // Destructuring
+// ========================================
 
 // Swap the value of two variables
 
 // let a=1
 // let b=2
 // console.log(`Before Destructuring: a is ${a} and b is ${b}`);
+
 // [a, b] = [b, a]
 // console.log(`After Destructuring: a is ${a} and b is ${b}`);
 
+// ----------------------------------------
 // Swap 2 elements in an array
+
 // const colors = ['red','green','blue','black','white']
 // console.log(`Before destructuring \n${colors}`);
 
 // [colors[0], colors[4]] = [colors[4], colors[0]]
-
 // console.log(`After destructuring \n${colors}`);
 
+// ----------------------------------------
 // assign array elements to variables
+
 // const colors = ['red','green','blue','black','white']
 // // const [firstColor, secondColor, thirdColor, fourthColor, fifthColor] = colors
+
 // // Below rest operator is used that combines the elements on a single array
 // const [firstColor, secondColor, thirdColor, ...extraColors] = colors
 
@@ -420,7 +437,9 @@
 // console.log(thirdColor);
 // console.log(extraColors);
 
+// -----------------------------------------
 // extract values from objects
+
 // const person1 = {
 //     fName: 'Ali',
 //     lName: 'Hassan',
@@ -432,7 +451,10 @@
 //     lName: 'Ali',
 //     age: 22,
 // }
-// Here destructuring variable name must be same as of attributes
+
+// // ! important Note !
+// // Here destructuring variable name must be same as of attributes
+
 // const {fName, lName, age, job} = person1
 // console.log(fName);
 // console.log(lName);
@@ -446,6 +468,7 @@
 // console.log(myJob);
 
 // destructure in function Parameters
+
 // function displayPerson({fName, lName, age, job='unemployeed'}) {
 //     console.log(`name: ${fName} ${lName}`);
 //     console.log(`age: ${age}`);
@@ -459,6 +482,8 @@
 
 // ========================================
 // nested Objects
+// ========================================
+
 // const person = {
 //     fullName: "Ali Hassan",
 //     age: 30,
@@ -493,10 +518,10 @@
 // }
 
 // class Person {
-//     constructor(name, age, ...address) {
+//     constructor(name, age, ...address) { // here ...address works as rest operator
 //         this.name = name
 //         this.age = age
-//         this.address = new Address(...address)
+//         this.address = new Address(...address) // here ...address works as spread operator
 //     }
 // }
 
@@ -520,6 +545,8 @@
 
 // ========================================
 // array of objects
+// ========================================
+
 // const fruits = [
 //     {name: 'apple', color: 'red', calories: 95},
 //     {name: 'orange', color: 'orange', calories: 45},
@@ -528,7 +555,9 @@
 //     {name: 'pineapple', color: 'yellow', calories: 57},
 // ]
 
+// ---------------------------------------------
 // foreach
+
 // the sequence of parameter of function remains same reverse of it won't work
 // fruits.forEach((fruit, index) => console.log(`Index ${index} : ${fruit.name}`))
 
@@ -540,7 +569,9 @@
 // const fruitCalories = fruits.map(fruit => fruit.calories)
 // console.log(fruitCalories);
 
+// ---------------------------------------------
 // filter
+
 // const yellowFruit = fruits.filter(fruit => fruit.color === 'yellow')
 // const lowCal = fruits.filter(fruit => fruit.calories < 100)
 // const highCal = fruits.filter(fruit => fruit.calories >= 100)
@@ -548,25 +579,24 @@
 // console.log(lowCal);
 // console.log(highCal);
 
+// ---------------------------------------------
 // reduce Method
+
 // const maxFruit = fruits.reduce((previous, next) => {
-//     return previous.calories > next.calories ?
-//     previous : next
+//     return previous.calories > next.calories ? previous : next
 // })
 // const minFruit = fruits.reduce((previous, next) => {
-//     return previous.calories < next.calories ?
-//     previous : next
+//     return previous.calories < next.calories ? previous : next
 // })
 
 // console.log(maxFruit);
 // console.log(minFruit);
 
-
 // console.log("Original array:", [...fruits]); // Log a copy of the array
 // fruits.pop(); // Remove the last element from the array
 // console.log("Updated array:", fruits); // Log the updated array
 // console.log(fruits); // Splice method make changes in the original array
-// won't work well
+
 // console.log(fruits.splice(-2, 2, {name:"guava", color: 'green', calories: 64}));
 
 
@@ -589,12 +619,15 @@
 // ========================================
 
 // ========================================
+// Sorting an Array (According to the laxical Order)
+// ========================================
 
 // let fruit = ['apple','orange','banana','coconut','pineapple']
 // let fruit = [1, 12, 41, 53, 4, 5]
 
 // let ascen = fruit.sort((n1, n2) => n1 - n2)
 // console.log(ascen);
+
 // // for reverse order
 // let descen = fruit.sort((n1, n2) => n2 - n1)
 // console.log(descen);
@@ -624,7 +657,10 @@
 
 // ========================================
 // shuffle an array
+// ========================================
+
 // cards.sort(() => Math.random() - 0.5)
+
 // const cards = ['A', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K'];
 
 // function shuffle(array) {
@@ -637,12 +673,15 @@
 
 // console.log("Original array:", cards);
 // const shuffledCards = shuffle(cards);
-// console.log("Shuffled array:", shuffledCards);
+// console.log("Shuffled array:", shuffledCards); // This and below statement would have same output
+// // console.log("Original array:", cards);
 
 // ========================================
 
 // ========================================
 // Dates 
+// ========================================
+
 // const date = new Date()
 
 // let year = date.getFullYear()
@@ -658,6 +697,7 @@
 // const date1 = new Date('2023-12-31')
 // const date2 = new Date('2024-01-01')
 
+// We can also compare dates
 // if(date2 > date1) {
 //     console.log("Happy New Year!");
 // }
@@ -666,7 +706,10 @@
 
 // ========================================
 // Closures
-// Closure means a function inside another function, the inner function can access the variables and scope of the outer function
+// ========================================
+
+// Closure means a function inside another function, the inner function can
+// access the variables and scope of the outer function
 
 // function outer() {
 //     let message = 'hello Outer'
@@ -677,6 +720,8 @@
 // }
 
 // outer()
+
+// ---------------------------------------------
 
 // function createCounter() {
 //     let count=0
@@ -693,6 +738,8 @@
 // counter.increment()
 // counter.increment()
 // console.log(counter.getCount());
+
+// ---------------------------------------------
 
 // function createGame() {
 //     let score = 0
@@ -722,22 +769,26 @@
 
 // ========================================
 // setTimeout Method
+// ========================================
 
 // const timeOutId = setTimeout(() => {
 //     window.alert('hello')
 // }, 3000);
 // clearTimeout(timeOutId)
 
-let timeId;
-function startTimer() {
-    timeId = setTimeout(() => {
-        window.alert('Hello')
-    }, 3000);
-}
+// ---------------------------------------------
 
-function clearTimer() {
-    clearTimeout(timeId)
-}
+// let timeId;
+
+// function startTimer() {
+//     timeId = setTimeout(() => {
+//         window.alert('Hello')
+//     }, 3000);
+// }
+
+// function clearTimer() {
+//     clearTimeout(timeId)
+// }
 
 // ========================================
 // ========================================

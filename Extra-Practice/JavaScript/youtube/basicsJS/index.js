@@ -7,23 +7,29 @@
 
 // ==========================================
 // variables
+// ==========================================
+
 /*
 // Strings
+
 let fname = 'Ali';
 let lname = 'Hassan';
 let food = 'Burger';
 let email = 'alihassan@gmail.com';
 
 // Numbers
+
 let age = 22;
 let price = 12.99;
 let gpa = 3.33;
 
 // Boolean
+
 let online = 'true';
 let forsale = 'true';
 let student = 'true';
 
+// output in form of template literals
 
 console.log(`this car is for sale: ${forsale}`);
 console.log(`${fname} is online: ${online}`);
@@ -45,6 +51,8 @@ document.getElementById('mypara2').textContent = `your email is: ${email}`;
 
 // ============================================
 // Arithmatic Operator
+// ============================================
+
 // let student = 30;
 // student++; // student = student + 1 | student += 1 (Augmented Assignment Operator)
 // student--; // student = student - 1 | student -= 1
@@ -52,36 +60,33 @@ document.getElementById('mypara2').textContent = `your email is: ${email}`;
 // student /= 2; // student = student / 2
 // student **= 2 // student = student ** 2 (means power of 2)
 
-
 // console.log(student);
 
 // ============================================
 
 // ============================================
-
 // How to get input from the user
 // two ways of getting input from user
+// ============================================
 
 // let username;
-
 // 1. using window.prompt method
 
 // username = window.prompt("Enter your name? ");
 // console.log(`your username: ${username}`);
-
+// ---------------------------------------------
 // 2. By using input element and tag that using js to get the input data
-
 // document.getElementById('mybutton').onclick = function() {
 //     username = document.getElementById('text').value;
 //     document.getElementById('myhead1').textContent = `Hello ${username}`
 // }
 
-
 // ============================================
 
 // ============================================
-
 // type conversion
+// ============================================
+
 // let age = window.prompt("What's your age? ");
 // age = Number(age); // convert String to number
 // age += 1;
@@ -98,10 +103,6 @@ document.getElementById('mypara2').textContent = `your email is: ${email}`;
 // console.log(x, typeof(x));
 // console.log(y, typeof(y));
 // console.log(z, typeof(z));
-
-// ============================================
-
-// ============================================
 
 // const PI = 3.14159;
 // let radius;
@@ -120,6 +121,8 @@ document.getElementById('mypara2').textContent = `your email is: ${email}`;
 
 // ============================================
 
+// ============================================
+// Math functions
 // ============================================
 
 // let x = 3.32;
@@ -144,6 +147,8 @@ document.getElementById('mypara2').textContent = `your email is: ${email}`;
 // ============================================
 
 // ============================================
+// Conditions
+// ============================================
 
 // function showAge() {
 //     let age = document.getElementById('mytext').value;
@@ -162,7 +167,6 @@ document.getElementById('mypara2').textContent = `your email is: ${email}`;
 // ============================================
 
 // let mysubmit = document.getElementById('mysubmit');
-
 // mysubmit.onclick = function() {
 // Retrieve the current value of the input field inside the click event handler
 // let name = document.getElementById('mytext').value;
@@ -186,18 +190,19 @@ document.getElementById('mypara2').textContent = `your email is: ${email}`;
 // document.getElementById('mytext').value = '';
 // }
 
-
 // ============================================
 
 // ============================================
 
 // let phoneNumber = '123-456-7890';
-// phoneNumber = phoneNumber.padStart(15, '+92-');
+    // phoneNumber = phoneNumber.padStart(15, '+92-');
 // phoneNumber = phoneNumber.replaceAll('-', '');
 // console.log(phoneNumber);
 
 // ============================================
 
+// ============================================
+// String Methods
 // ============================================
 
 // const fullName = 'Ali Hassan';
@@ -216,6 +221,8 @@ document.getElementById('mypara2').textContent = `your email is: ${email}`;
 // ============================================
 
 // ============================================
+// email checker
+// ============================================
 
 // let email = 'alihassan@gmail.com';
 // let username = email.slice(0, email.indexOf('@'));
@@ -226,10 +233,9 @@ document.getElementById('mypara2').textContent = `your email is: ${email}`;
 // ============================================
 
 // ============================================
-
+// No Method chaining
 // ============================================
 
-// No Method chaining
 // let mybutton = document.getElementById('submit');
 // mybutton.onclick = function () {
 //     let username = document.getElementById('mytext').value;
@@ -242,6 +248,8 @@ document.getElementById('mypara2').textContent = `your email is: ${email}`;
 //     console.log(username);
 //     document.getElementById('newtext').textContent = username;
 // }
+
+// ---------------------------------------------
 
 // Method chaining
 // let mybutton = document.getElementById('submit');
@@ -256,8 +264,10 @@ document.getElementById('mypara2').textContent = `your email is: ${email}`;
 // ============================================
 
 // ============================================
-
 // foreach Method
+// it takes a function as parameter
+// ============================================
+
 // let number = [1,2,3,4,5,6]
 
 // function display(element) {
@@ -303,7 +313,6 @@ function display(element) {
 }
 
 fruits.forEach(Capitalize)
-
 
 // ============================================
 

@@ -7,12 +7,12 @@ generate.onclick = function () {
     const includeNumber = document.getElementById('number').checked; // Change .value to .checked
     const includeSymbol = document.getElementById('symbol').checked; // Change .value to .checked
 
-    let newText = document.getElementById('newText');
-
     const lowercaseChar = 'qwertyuiopasdfghjklzxcvbnm';
     const uppercaseChar = 'QWERTYUIOPLKJHGFDSAZXCVBNM';
     const numberChar = '0123456789';
     const symbolChar = '@$#-_&';
+
+    let newText = document.getElementById('newText');
 
     let allowedChar = '';
     let password = ''; // Initialize password as an empty string

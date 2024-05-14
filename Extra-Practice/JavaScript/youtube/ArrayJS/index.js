@@ -13,14 +13,18 @@
 
 // let fruitLength = fruits.length;
 
+// fruits.forEach(element => {
+//     console.log(element);
+// });
+
 // // for(let i=0; i < fruitLength; i++) {
 // //     console.log(fruits[i]);
 // // }
 
 // // not working well
-// // for(let fruit of fruits) {
-// //     console.log(fruit);
-// // }
+// for(let fruit of fruits) {
+//     console.log(fruit);
+// }
 
 // fruits.sort().reverse();
 
@@ -31,8 +35,9 @@
 // console.log(fruitLength);
 
 // =========================================
-
 // spread operator
+// =========================================
+
 // let nums = [1,2,3,4,5];
 // let max = Math.max(...nums);
 // let min = Math.min(...nums);
@@ -47,6 +52,7 @@
 // let fruits = ['apple','orange','banana'];
 // let vegetables = ['carrots','celery','potato'];
 // // let foods = [...fruits, ...vegetables];
+
 // let foods = [...fruits, ...vegetables, 'eggs', 'milk'];
 // // let foods = [...fruits, username];
 
@@ -55,6 +61,8 @@
 
 // ==========================================
 // rest operator
+// ==========================================
+
 // function open(...foods) {
 //     // console.log(...foods);
 //     console.log(foods);
@@ -70,9 +78,9 @@
 
 // // open(food1, food2, food3, food4, food5)
 // const foods = toget(food1, food2, food3, food4, food5);
-// console.log(foods);
 
 // ===========================================
+
 // function sum(...nums) {
 //     let result = 0;
 //     for(let number of nums) {
@@ -105,6 +113,7 @@
 
 // =============================================
 // Map function
+// =============================================
 
 // const number = [1,2,3,4,5]
 // const squares = number.map(square)
@@ -132,7 +141,9 @@
 // function lowerCase(element) {
 //     return element.toUpperCase();
 // }
+
 // =============================================
+
 // const date = ['2024-1-10','2025-4-13','2022-15-25']
 
 // const formatDates = date.map(formatDate)
@@ -141,12 +152,14 @@
 
 // function formatDate(element) {
 //     const parts = element.split('-')
+//     console.log(parts);
 //     return `${parts[1]}/${parts[2]}/${parts[0]}`
 // }
 // =============================================
 
 // =============================================
 // Filter Method of Arrays
+// =============================================
 
 // let number = [1,2,3,4,5]
 // let evenNums = number.filter(isEven)
@@ -194,6 +207,7 @@
 
 // =============================================
 // Reduce Function
+// =============================================
 
 // const prices = [12, 15, 25, 63, 16]
 
@@ -204,21 +218,20 @@
 //     return previous + next
 // }
 
-const grades = [75,80, 90, 95, 60]
+// const grades = [75,80, 90, 95, 60]
 
-const maxi = grades.reduce(getMax)
-const mini = grades.reduce(getMin)
+// const maxi = grades.reduce(getMax)
+// const mini = grades.reduce(getMin)
 
-console.log(maxi);
-console.log(mini);
+// console.log(maxi);
+// console.log(mini);
 
-function getMax(previous, next) {
-    return Math.max(previous, next)
-}
-function getMin(previous, next) {
-    return Math.min(previous, next)
-}
-
+// function getMax(previous, next) {
+//     return Math.max(previous, next)
+// }
+// function getMin(previous, next) {
+//     return Math.min(previous, next)
+// }
 
 // =============================================
 

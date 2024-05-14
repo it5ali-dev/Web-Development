@@ -27,23 +27,28 @@
 // console.log(`Division of number: ${division(10, 20)}`);
 
 // function isEven(num1) {
-//     return num1%2 == 0 ? true : false;
+//     return num1%2 == 0
 // }
 // console.log(`number is even: ${isEven(13)}`);
 
 // function isValidEmail(email) {
-//     return email.includes('@') ? true : false;
+//     return email.includes('@')
 // }
 // console.log(`email is valid: ${isValidEmail('ali@fake.com')}`);
 // console.log(`email is valid: ${isValidEmail('alifake.com')}`);
 
 // ========================================
 // function Expression
+// ========================================
+// Anonymous Function
+
 // const hello = function() {
 //     console.log('Hello');
 // }
 
 // setTimeout(hello, 3000);
+
+// Arrow function
 
 // setTimeout(() => {
 //     console.log('World');
@@ -67,8 +72,8 @@
 //     return Math.pow(element, 2)
 // })
 
-// const isEven = number.filter(function(e) {
-    //     return e%2 === 0
+// const isEven = number.filter(function(element) {
+    //     return element % 2 === 0
     // })
     
     // console.log(isEven);
@@ -77,6 +82,7 @@
 
 // =======================================
 // Arrow Function
+// =======================================
 
 // let name = 'Ali'
 // let age = 12
@@ -96,19 +102,15 @@ const numbers = [1,2,3,4,5,6]
 const squares = numbers.map((element) => {
     return Math.pow(element, 2)
 })
-
 const cube = numbers.map((element) => {
     return Math.pow(element, 3)
 })
-
 const isEven = squares.filter((element) => {
     return element%2 === 0
 })
-
 const isOdd = squares.filter((element) => {
     return element%2 !== 0
 })
-
 const total = numbers.reduce((previous, next) => {
     return previous + next
 })

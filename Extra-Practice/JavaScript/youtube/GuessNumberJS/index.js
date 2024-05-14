@@ -1,4 +1,4 @@
-const min = 1;
+const min = 50;
 const max = 100;
 
 const answer = Math.floor(Math.random() * (max - min) + min);
@@ -9,12 +9,12 @@ let running = true;
 // console.log(guess);
 
 while (running) {
-    guess = Number(prompt('Guess a number between 1 and 100'));
+    guess = Number(prompt('Guess a number between 50 and 100'));
     guess = Number(guess);
     if(isNaN(guess)) {
         window.alert('Please enter a number');
     } else if(guess < min || guess > max) {
-        window.alert('Please enter a number between 1 and 100');
+        window.alert('Please enter a number between 50 and 100');
     } else {
         attempt++;
         if(guess < answer) {
