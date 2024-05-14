@@ -484,37 +484,160 @@
 // console.log(person.address.city);
 // console.log(person.address.street);
 
-class Address {
-    constructor(street, city, country) {
-        this.street = street
-        this.city = city
-        this.country = country
+// class Address {
+//     constructor(street, city, country) {
+//         this.street = street
+//         this.city = city
+//         this.country = country
+//     }
+// }
+
+// class Person {
+//     constructor(name, age, ...address) {
+//         this.name = name
+//         this.age = age
+//         this.address = new Address(...address)
+//     }
+// }
+
+// const person1 = new Person('ali', 30, 'fateh', 'sialkot', 'pakistan')
+// const person2 = new Person('hassan', 20, 'garh', 'sialkot', 'pakistan')
+// const person3 = new Person('ali hassan', 50, 'fateh garh', 'sialkot', 'pakistan')
+
+// console.log(person1.name);
+// console.log(person1.age);
+// console.log(person1.address);
+
+// console.log(person2.name);
+// console.log(person2.age);
+// console.log(person2.address);
+
+// console.log(person3.name);
+// console.log(person3.age);
+// console.log(person3.address);
+
+// ========================================
+
+// ========================================
+// array of objects
+// const fruits = [
+//     {name: 'apple', color: 'red', calories: 95},
+//     {name: 'orange', color: 'orange', calories: 45},
+//     {name: 'banana', color: 'yellow', calories: 95},
+//     {name: 'coccnut', color: 'white', calories: 159},
+//     {name: 'pineapple', color: 'yellow', calories: 57},
+// ]
+
+// foreach
+// the sequence of parameter of function remains same reverse of it won't work
+// fruits.forEach((fruit, index) => console.log(`Index ${index} : ${fruit.name}`))
+
+// map 
+// const fruitName = fruits.map(fruit => fruit.name)
+// console.log(fruitName);
+// const fruitColor = fruits.map(fruit => fruit.color)
+// console.log(fruitColor);
+// const fruitCalories = fruits.map(fruit => fruit.calories)
+// console.log(fruitCalories);
+
+// filter
+// const yellowFruit = fruits.filter(fruit => fruit.color === 'yellow')
+// const lowCal = fruits.filter(fruit => fruit.calories < 100)
+// const highCal = fruits.filter(fruit => fruit.calories >= 100)
+// console.log(yellowFruit);
+// console.log(lowCal);
+// console.log(highCal);
+
+// reduce Method
+// const maxFruit = fruits.reduce((previous, next) => {
+//     return previous.calories > next.calories ?
+//     previous : next
+// })
+// const minFruit = fruits.reduce((previous, next) => {
+//     return previous.calories < next.calories ?
+//     previous : next
+// })
+
+// console.log(maxFruit);
+// console.log(minFruit);
+
+
+// console.log("Original array:", [...fruits]); // Log a copy of the array
+// fruits.pop(); // Remove the last element from the array
+// console.log("Updated array:", fruits); // Log the updated array
+// console.log(fruits); // Splice method make changes in the original array
+// won't work well
+// console.log(fruits.splice(-2, 2, {name:"guava", color: 'green', calories: 64}));
+
+
+// fruits.push({name: 'grapes', color: 'green', calories: 65})
+
+// console.log(fruits[0].name);
+// console.log(fruits[0].color);
+// console.log(fruits[0].calories);
+
+// console.log(fruits[3].name);
+// console.log(fruits[3].color);
+// console.log(fruits[3].calories);
+
+// // console.log(fruits.length);
+
+// console.log(fruits[fruits.length-1].name);
+// console.log(fruits[fruits.length-1].color);
+// console.log(fruits[fruits.length-1].calories);
+
+// ========================================
+
+// ========================================
+
+// let fruit = ['apple','orange','banana','coconut','pineapple']
+// let fruit = [1, 12, 41, 53, 4, 5]
+
+// let ascen = fruit.sort((n1, n2) => n1 - n2)
+// console.log(ascen);
+// // for reverse order
+// let descen = fruit.sort((n1, n2) => n2 - n1)
+// console.log(descen);
+
+// const people = [
+//     {name: 'ali', age: 30, gpa: 3.0},
+//     {name: 'hassan', age: 20, gpa: 3.3},
+//     {name: 'ali Hassan', age: 22, gpa: 2.5},
+//     {name: 'sandy', age: 21, gpa: 4.0},
+// ]
+
+// console.log([...people]);
+
+// sort according to their age
+// let ageSort = people.sort((a, b) => a.age - b.age)
+// console.log([...ageSort]);
+
+// sort according to their gpa
+// let gpaSort = people.sort((a, b) => a.gpa - b.gpa)
+// console.log(gpaSort);
+
+// sort according to their name
+// let nameSort = people.sort((a, b) => a.name.localeCompare(b.name))
+// console.log(nameSort);
+
+// ========================================
+
+// ========================================
+// shuffle an array
+// cards.sort(() => Math.random() - 0.5)
+const cards = ['A', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K'];
+
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const rand = Math.floor(Math.random() * (i + 1));
+        [array[i], array[rand]] = [array[rand], array[i]];
     }
+    return array; // Return the shuffled array
 }
 
-class Person {
-    constructor(name, age, ...address) {
-        this.name = name
-        this.age = age
-        this.address = new Address(...address)
-    }
-}
-
-const person1 = new Person('ali', 30, 'fateh', 'sialkot', 'pakistan')
-const person2 = new Person('hassan', 20, 'garh', 'sialkot', 'pakistan')
-const person3 = new Person('ali hassan', 50, 'fateh garh', 'sialkot', 'pakistan')
-
-console.log(person1.name);
-console.log(person1.age);
-console.log(person1.address);
-
-console.log(person2.name);
-console.log(person2.age);
-console.log(person2.address);
-
-console.log(person3.name);
-console.log(person3.age);
-console.log(person3.address);
+console.log("Original array:", cards);
+const shuffledCards = shuffle(cards);
+console.log("Shuffled array:", shuffledCards);
 
 // ========================================
 // ========================================
