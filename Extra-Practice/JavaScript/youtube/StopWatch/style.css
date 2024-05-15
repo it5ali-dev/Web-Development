@@ -1,0 +1,32 @@
+html, body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 40px;
+}
+h1 {
+    font-size: 6rem;
+}
+#display, 
+#control {
+    font-size: 5rem;
+    /* background: aqua; */
+}
+#display {
+    font-weight: bold;
+    color: rgb(125, 125, 125);
+    text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.7);
+}
+#control {
+    display: flex;
+    justify-content: space-evenly;
+}
