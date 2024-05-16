@@ -1,0 +1,8 @@
+<% comments.forEach(comment => { %> 
+    <% console.log('Comment:', comment); %>
+    <% const user = users.find(u => u.uid === comment.uid); %>
+    <% console.log('User:', user); %>
+    <% const icecream = types.find(t => t.id === comment.tid); %>
+    <% console.log('Ice Cream:', icecream); %>
+    <!-- Your existing code here -->
+<% }); %>
