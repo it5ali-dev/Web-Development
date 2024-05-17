@@ -7,6 +7,8 @@ const jsonIcecreamTypeData = require('./data/icecreamtypes.json');
 const jsonCommentData = require('./data/comments.json');
 const jsonUserData = require('./data/users.json');
 
+app.use(express.static(path.join(__dirname, 'public')));
+
 // Set up EJS template engine
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -29,20 +31,14 @@ app.get('/comments', (req, res) => {
 });
 
 app.get('/feedback', (req, res) => {
-    try {
-        res.render('list', {
-            title: 'User Feedback',
-            types: jsonIcecreamTypeData.icecreamTypes,
-            comments: jsonCommentData.comments,
-            users: jsonUserData.users
-        });
-    } catch (error) {
-        console.error('Error rendering feedback:', error);
-        res.status(500).send('Internal Server Error');
-    }
-});
-
-
+    res.render('list', {
+      title: 'User Feedback',
+      types: jsonIcecreamTypeData.icecreamtypes,
+      comments: jsonCommentData.comments,
+      users: jsonUserData.users
+    });
+  });
+  
 // Start server
 const PORT = 3000;
 app.listen(PORT, () => {

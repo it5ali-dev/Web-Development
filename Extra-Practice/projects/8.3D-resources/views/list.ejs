@@ -1,0 +1,50 @@
+<%- include('header'); -%>
+
+<header>
+  <div class="container-fluid bg-info-subtle mb-4">
+    <div class="col-sm-8 mx-auto text-center py-2">
+      <h1 class="display-4">World of Ice Cream</h1>
+      <p class="lead">Feedback from ice cream lovers....</p>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <h1><%= title %></h1>
+    <p>
+      Welcome to the <%= title %> website. Here you will find some useful information and data on people's experience with ice cream!
+    </p>
+
+    <div class="row my-5" id="feedback">
+      <% comments.forEach(comment => { 
+        const user = users.find(u => u.uid === comment.uid);
+        const icecream = types.find(t => t.id === comment.tid);
+        if (!user || !icecream) {
+          console.error('User or Ice Cream type not found for comment:', comment);
+        } else {
+      %>
+      <div class="col-md-12 mb-4">
+        <div class="row card d-flex flex-row" style="background-color: #CFE2FF;">
+          <img src="<%= user.image %>" style="border-radius: 50%; height: 120px; width: 140px;" id="imageRound" class="img-fluid col-12 col-md-3 m-2" alt="<%= user.name %>" />
+          <div class="card-body col-12 col-md-9 p-4">
+            <h5 class="card-title"><%= user.name %></h5>
+            <span class="card-text"><%= icecream.name %></span>
+            <span class="card-text">
+              <%= Array(parseInt(comment.rating)).fill('★').join('') %>
+              <%= Array(5 - parseInt(comment.rating)).fill('☆').join('') %>
+            </span>
+            <p class="card-text"><%= comment.text %></p>
+            <p class="card-text">
+              <small class="text-muted"><%= new Date(comment.posted) %></small>
+            </p>
+          </div>
+        </div>
+      </div>
+      <% } %>
+      <% }); %>
+    </div>
+  </div>
+</main>
+
+<%- include('footer'); -%>

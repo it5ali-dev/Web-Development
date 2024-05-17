@@ -291,28 +291,38 @@ document.getElementById('mypara2').textContent = `your email is: ${email}`;
 // number.forEach(display)
 // display(number)
 
-let fruits = ['apple','orange','banana','coconut']
+// let fruits = ['apple','orange','banana','coconut']
 
-function upperCase(element, index, array) {
-    array[index] = element.toUpperCase()
-    display(array[index])
-}
+// function upperCase(element, index, array) {
+//     array[index] = element.toUpperCase()
+//     display(array[index])
+// }
 
-function lowerCase(element, index, array) {
-    array[index] = element.toLowerCase()
-    display(array[index])
-}
+// function lowerCase(element, index, array) {
+//     array[index] = element.toLowerCase()
+//     display(array[index])
+// }
 
-function Capitalize(element, index, array) {
-    array[index] = element.charAt(0).toUpperCase() + element.slice(1)
-    display(array[index])
-}
+// function Capitalize(element, index, array) {
+//     array[index] = element.charAt(0).toUpperCase() + element.slice(1)
+//     display(array[index])
+// }
 
-function display(element) {
-    console.log(element);
-}
+// function display(element) {
+//     console.log(element);
+// }
 
-fruits.forEach(Capitalize)
+// fruits.forEach(Capitalize)
 
+// ============================================
+
+// ============================================
+
+let x = ['party','all','night']
+// let y = x.push('baby')
+let y = x
+console.log(y);
+
+// ============================================
 // ============================================
 
