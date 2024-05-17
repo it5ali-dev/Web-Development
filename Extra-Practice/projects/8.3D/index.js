@@ -29,13 +29,19 @@ app.get('/comments', (req, res) => {
 });
 
 app.get('/feedback', (req, res) => {
-    res.render('list', {
-        title: 'User Feedback',
-        types: jsonIcecreamTypeData.icecreamTypes,
-        comments: jsonCommentData.comments, // Corrected property name from `comment` to `comments`
-        users: jsonUserData.users
-    });
+    try {
+        res.render('list', {
+            title: 'User Feedback',
+            types: jsonIcecreamTypeData.icecreamTypes,
+            comments: jsonCommentData.comments,
+            users: jsonUserData.users
+        });
+    } catch (error) {
+        console.error('Error rendering feedback:', error);
+        res.status(500).send('Internal Server Error');
+    }
 });
+
 
 // Start server
 const PORT = 3000;
