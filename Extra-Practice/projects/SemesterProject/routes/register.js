@@ -4,10 +4,6 @@ const Userinfo = require("../../models/userModel");
 // last part of the json web token that will be secret
 const jwtSecret = "mynameisalinicetomeetyou";
 
-router.get('/signup',(req,res)=>{
-    res.render("signup");
-    })
-
 // Route for signing up a new user
 router.post('/signup', [
     // Validate user input
@@ -46,7 +42,11 @@ router.post('/signup', [
     }
     } catch (error) {
         console.error(error);
-        res.status(500).json({ success: false, message: 'Server Error' });
+        res.status(500).json({ success: true, message: 'Server Error' });
     }
 });
+
+router.get('/signup',(req,res)=>{
+    res.render("/signup",{layout: true});
+    })
 

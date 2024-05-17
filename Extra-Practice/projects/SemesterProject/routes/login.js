@@ -42,7 +42,7 @@ router.post('/login', [
 });
 router.get('/login', (req, res) => {
     
-    res.render('login',{layout:false}); 
+    res.render('/login',{layout: true}); 
   });
   router.get('/logout', (req, res) => {
     req.session.authenticated = false;

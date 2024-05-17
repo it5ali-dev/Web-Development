@@ -40,9 +40,11 @@ app.use(isAuthenticated);
 
 app.set('view engine', 'ejs');
 app.use(expressLayouts);
+
 app.use(express.static(path.join(__dirname, "Public")));
 app.use(express.static('public'));
+app.set('views', path.join(__dirname, 'views'));
 app.use('/', require(path.join(__dirname, 'routes/routes.js')));
 app.use(express.static(path.join(__dirname, "uploads")));
 app.set('layout', 'layouts/base');
-app.set('views', path.join(__dirname, 'views'));
+

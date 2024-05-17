@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="style.css" />
+  <title>Calculator</title>
+</head>
+<body>
+  <main class="d-flex justify-content-center align-items-center vh-100">
+    <div class="container w-50 p-3">
+      <div class="calculator">
+        <input type="text" id="display" readonly class="box p-3 form-control" />
+        
+        <div class="keys mt-3">
+          <div class="row g-1">
+            <div class="col-3">
+              <button class="btn btn-secondary btn-lg btan w-100 bg-light text-dark" onclick="clearDisplay()">C</button>
+            </div>
+            <div class="col-3">
+              <button class="btn btn-warning btn-lg btan w-100 text-white" onclick="appendToDisplay('+')">+</button>
+            </div>
+            <div class="col-3">
+              <button class="btn btn-warning btn-lg btan w-100 text-white" onclick="appendToDisplay('-')">-</button>
+            </div>
+            <div class="col-3">
+              <button class="btn btn-warning btn-lg btan w-100 text-white" onclick="appendToDisplay('*')">*</button>
+            </div>
+          </div>
+          <div class="row g-1">
+            <div class="col-3">
+              <button class="btn btn-secondary btn-lg btan w-100" onclick="appendToDisplay('7')">7</button>
+            </div>
+            <div class="col-3">
+              <button class="btn btn-secondary btn-lg btan w-100" onclick="appendToDisplay('8')">8</button>
+            </div>
+            <div class="col-3">
+              <button class="btn btn-secondary btn-lg btan w-100" onclick="appendToDisplay('9')">9</button>
+            </div>
+            <div class="col-3">
+              <button class="btn btn-warning btn-lg btan w-100 text-white" onclick="appendToDisplay('/')">/</button>
+            </div>
+          </div>
+          <div class="row g-1">
+            <div class="col-3">
+              <button class="btn btn-secondary btn-lg btan w-100" onclick="appendToDisplay('4')">4</button>
+            </div>
+            <div class="col-3">
+              <button class="btn btn-secondary btn-lg btan w-100" onclick="appendToDisplay('5')">5</button>
+            </div>
+            <div class="col-3">
+              <button class="btn btn-secondary btn-lg btan w-100" onclick="appendToDisplay('6')">6</button>
+            </div>
+            <div class="col-3">
+              <button class="btn btn-dark btn-lg btan w-100" onclick="appendToDisplay('0')">0</button>
+            </div>
+          </div>
+          <div class="row g-1">
+            <div class="col-3">
+              <button class="btn btn-secondary btn-lg btan w-100" onclick="appendToDisplay('1')">1</button>
+            </div>
+            <div class="col-3">
+              <button class="btn btn-secondary btn-lg btan w-100" onclick="appendToDisplay('2')">2</button>
+            </div>
+            <div class="col-3">
+              <button class="btn btn-secondary btn-lg btan w-100" onclick="appendToDisplay('3')">3</button>
+            </div>
+            <div class="col-3">
+              <button class="btn btn-dark btn-lg btan w-100" onclick="appendToDisplay('.')">.</button>
+            </div>
+          </div>
+          <div class="row g-1">
+            <div class="col-12 text-center my-4">
+              <button class="btn btn-danger btn-lg equal" onclick="calculate()">=</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="./index.js"></script>
+</body>
+</html>
