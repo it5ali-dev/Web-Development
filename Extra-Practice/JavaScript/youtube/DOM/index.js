@@ -83,15 +83,82 @@ const fruits = document.getElementsByClassName('fruit')
 // -------------------------------------
 // querySelectorAll
 
-const element = document.querySelectorAll(".fruit")
+// const element = document.querySelectorAll(".fruit")
 
-console.log(element); 
+// console.log(element); 
 
-element.forEach(el => {
-    el.style.background = 'lightgreen'
-})
+// element.forEach(el => {
+//     el.style.background = 'lightgreen'
+// })
 
 // =====================================
+// .firstElementChild
+
+// const element = document.getElementById('root')
+// const firstChild = element.firstElementChild
+// firstChild.style.backgroundColor = 'yellow'
+
+// Using QuerySelectorAll
+// const element = document.querySelectorAll('ul')
+// element.forEach(el => {
+//     const first = el.firstElementChild
+//     first.style.background = 'lightgreen'
+// })
+
+// =====================================
+// .lastElementChild
+
+// const root = document.getElementById('root')
+// const last = root.lastElementChild
+// last.style.background = 'yellow'
+
+// const root = document.querySelectorAll('ul')
+// root.forEach(el => {
+//     const last = el.lastElementChild
+//     last.style.background = 'yellow'
+// })
+
+// =====================================
+// .nextElementSibling
+
+// const element = document.getElementById('apple')
+// const nextSibling = element.nextElementSibling
+// nextSibling.style.background = 'red'
+// const element = document.getElementById('fruits')
+// const nextSibling = element.nextElementSibling
+// nextSibling.style.background = 'red'
+
+// =====================================
+// .nextElementSibling
+
+// const element = document.getElementById('orange')
+// const prevSibling = element.previousElementSibling
+// prevSibling.style.background = 'red'
+// const element = document.getElementById('root')
+// const prevSibling = element.previousElementSibling
+// prevSibling.style.background = 'red'
+
+// =====================================
+// .parentElement
+
+// const element = document.getElementById('apple')
+// const parent = element.parentElement
+// parent.style.background = 'lightgreen'
+
+// =====================================
+// .children
+
+// const element = document.getElementById('fruits')
+// const child = element.children
+
+// child[0].style.background = 'yellow'
+// child[1].style.background = 'skyblue'
+// child[2].style.background = 'lightgreen'
+
+// Array.from(child).forEach(el => {
+//     el.style.background = 'lightgreen'
+// })
+
 // =====================================
 // =====================================
 // =====================================
