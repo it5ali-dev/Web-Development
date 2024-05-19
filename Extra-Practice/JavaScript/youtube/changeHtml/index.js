@@ -28,8 +28,30 @@
 // ========================================
 
 // ========================================
+// working and creating listElements
 
+// Step 1: Create the Element
+const newElement = document.createElement('li')
 
+// Step 2: Add Attributes / Properties
+newElement.textContent = 'Coconut'
+newElement.id = 'coconut'
+newElement.style.fontWeight = 'bold'
+newElement.style.background = 'lightgreen'
+
+// Step 3: Append Element to DOM
+// document.getElementById('banana').append(newElement)
+// document.getElementById('fruits').append(newElement)
+// document.getElementById('fruits').prepend(newElement)
+// document.getElementById('banana').prepend(newElement)
+
+// const orange = document.getElementById('orange')
+// document.getElementById('fruits').insertBefore(newElement, orange)
+// console.log(newElement);
+
+// Using QuerySelector
+const listItems = document.querySelectorAll('#fruits li')
+document.getElementById('fruits').insertBefore(newElement, listItems[2])
 
 // ========================================
 // ========================================

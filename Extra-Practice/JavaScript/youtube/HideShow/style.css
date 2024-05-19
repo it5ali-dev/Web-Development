@@ -1,0 +1,14 @@
+#box {
+    width: 500px;
+    position: relative;
+}
+button {
+    margin-top: 30px;
+    font-size: 2.5rem;
+    padding: 10px 15px;
+    margin-left: 180px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: none;
+    border: 1px solid;
+}

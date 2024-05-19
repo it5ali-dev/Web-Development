@@ -1,0 +1,20 @@
+h1 {
+    background-color: red;
+    text-align: center;
+    padding: 5px;
+    color: white;
+    text-decoration: underline;
+}
+#box {
+    background-color: lightgreen;
+    width: 200px;
+    height: 200px;
+    font-size: 6rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    justify-content: center;
+    position: relative;
+}
