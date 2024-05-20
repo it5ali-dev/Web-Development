@@ -31,3 +31,12 @@ h1 {
     font-size: 5rem;
     margin: 30px 0;
 }
+.score {
+    font-size: 2rem;
+}
+.success, #playerScore {
+    color: green;
+}
+.fail, #computerScore {
+    color: red;
+}
