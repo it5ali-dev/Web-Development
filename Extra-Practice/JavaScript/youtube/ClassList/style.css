@@ -1,0 +1,23 @@
+#myH1 {
+    font-size: 3rem;
+}
+.btn {
+    font-size: 3rem;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+.enabled {
+    background-color: blue;
+    color: white;
+}
+.hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+    font-weight: bold;
+}
+.disabled {
+    background-color: rgba(128, 128, 128, 0.6);
+    color: rgb(241, 241, 241);
+}
