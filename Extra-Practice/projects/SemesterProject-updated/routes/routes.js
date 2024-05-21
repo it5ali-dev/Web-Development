@@ -21,6 +21,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/login', (req, res) => {
+    // res.render("signin",{layout:false});
     res.render("signin");
 });
 router.get('/register', (req, res) => {

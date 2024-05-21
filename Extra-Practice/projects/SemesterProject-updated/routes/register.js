@@ -8,8 +8,8 @@ const jwtSecret = "mynameisalinicetomeetyou";
 router.post('/signup', [
     // Validate user input
     body('email').isEmail(),
-    body('name').isLength({ min: 3 }),
-    body('passwords').isLength({ min: 5 })
+    body('passwords').isLength({ min: 5 }),
+    body('confirmPassword').isLength({ min: 5 }),
 ], async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
@@ -31,9 +31,9 @@ router.post('/signup', [
 
         // Create user in database
         await Userinfo.create({
-            name: req.body.name,
-            passwords: hashedPassword,
-            email: req.body.email
+            email: req.body.email,
+            password: hashedPassword,
+            confirmPassword: req.body.email
         });
 
         //res.json({ success: true });
