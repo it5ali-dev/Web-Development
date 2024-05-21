@@ -33,7 +33,6 @@ router.post('/signup', [
         await Userinfo.create({
             name: req.body.name,
             passwords: hashedPassword,
-            phonenumbers: req.body.phonenumbers,
             email: req.body.email
         });
 

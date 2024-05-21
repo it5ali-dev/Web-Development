@@ -21,7 +21,7 @@ h1 {
 }
 img.displaySlide {
     display: block;
-    animation: fade 1.5s;
+    animation: fade 2.5s;
 }
 .slider button {
     position: absolute;
