@@ -1,3 +1,31 @@
 .navbar-nav .nav-link {
     color: white !important; /* Set color to white */
   }
+  .carousel-item {
+    position: relative;
+    height: 90vh;
+  }
+  
+  .carousel-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4));
+    z-index: 1;
+  }
+  
+  .carousel-item img {
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+  
+  .carousel-caption {
+    z-index: 2;
+    position: relative;
+    color: #fff;
+  }
+  
