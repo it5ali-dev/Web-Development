@@ -29,3 +29,31 @@
     color: #fff;
   }
   
+  /*  */
+  #reviews .review-carousel {
+    width: 80%;
+    margin: 0 auto;
+    height: 40vh;
+    background-color: silver;
+    position: relative;
+  }
+  #reviews .carousel-item, .review-card, .card-body {
+    height: 100%;
+  }
+  #reviews .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #reviews .carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5%;
+  }
+  #reviews .carousel-control-prev {
+    left: -5%;
+  }
+  #reviews .carousel-control-next {
+    right: -5%;
+  }
