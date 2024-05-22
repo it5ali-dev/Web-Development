@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Ali",
+        "age": 30,
+        "isEmployee": true
+    },
+    {
+        "name": "Hassan",
+        "age": 28,
+        "isEmployee": true
+    },
+    {
+        "name": "Ali Hassan",
+        "age": 25,
+        "isEmployee": true
+    },
+    {
+        "name": "Fulan",
+        "age": 30,
+        "isEmployee": false
+    }
+]
