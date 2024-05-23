@@ -1,18 +1,19 @@
 
 const expressLayouts = require('express-ejs-layouts');
 const express = require('express');
-const app = express();
-const port = 4000;
-const path = require('path');
-const session = require("express-session");
 const mongoose = require('mongoose');
+const session = require("express-session");
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const path = require('path');
 let cookieParser = require("cookie-parser");
 
-mongoose.connect("mongodb://127.0.0.1:27017/MernStarterCode", {
-    // useNewUrlParser: true,
-    // useUnifiedTopology: true
+const app = express();
+const port = 4000;
+
+mongoose.connect("mongodb://127.0.0.1:27017/meat", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
 }).then(() => {
     console.log('Database is connected');
     app.listen(port, () => {

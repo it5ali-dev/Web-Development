@@ -19,6 +19,7 @@ const path = require("path");
 router.get('/', (req, res) => {
     res.render("home", { authenticated: req.session.authenticated || false });
 });
+router.use('/user/register',require(path.join(__dirname,'./api/student')))
 
 router.get('/login', (req, res) => {
     // res.render("signin",{layout:false});
