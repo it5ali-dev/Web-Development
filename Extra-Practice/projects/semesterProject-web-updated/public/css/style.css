@@ -62,3 +62,10 @@
     color: #fff !important;
     font-weight: bold;
   }
+
+  .profile {
+    border-color: rgb(207, 207, 207) !important;
+  }
+  .profile-text {
+    color:  rgb(98, 97, 97) !important;
+  }
