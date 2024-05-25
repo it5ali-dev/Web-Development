@@ -69,3 +69,13 @@
   .profile-text {
     color:  rgb(98, 97, 97) !important;
   }
+  .above-footer a {
+    color: black;
+    text-decoration: none;
+  }
+  .above-footer ul {
+    list-style-type: none;
+  }
+  .above-footer li {
+    margin: 5px 0;
+  }

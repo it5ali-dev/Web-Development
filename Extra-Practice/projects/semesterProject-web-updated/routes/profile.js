@@ -17,7 +17,7 @@ router.get('/createProfile', isAuthenticated, (req, res) => {
 });
 
 // Route to handle profile creation
-router.post('/create', isAuthenticated, [
+router.post('/createProfile', isAuthenticated, [
   check('firstName').notEmpty().withMessage('First Name is required'),
   check('lastName').notEmpty().withMessage('Last Name is required'),
   check('profile').notEmpty().withMessage('Profile type is required'),
@@ -35,7 +35,7 @@ router.post('/create', isAuthenticated, [
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     console.log('Validation errors:', errors.array());
-    return res.render('createProfile', { errors: errors.array() });
+    return res.render('createProfile', { errors: errors.array(), formData: req.body });
   }
 
   const profileData = { ...req.body, userId: req.session.userId };
@@ -44,7 +44,7 @@ router.post('/create', isAuthenticated, [
   try {
     await profile.save();
     console.log('Profile saved:', profile);
-    res.redirect('/');
+    res.redirect('/profiles');
   } catch (err) {
     console.error('Error saving profile:', err);
     res.status(500).send('Server error');
