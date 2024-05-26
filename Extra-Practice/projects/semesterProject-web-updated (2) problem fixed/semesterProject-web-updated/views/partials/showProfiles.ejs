@@ -1,0 +1,26 @@
+<div class="container" id="show">
+    <h1>User Profiles</h1>
+    <div class="user-list">
+        <% if (profiles.length > 0) { %>
+            <div class="cards">
+                <% profiles.forEach(profile => { %>
+                    <div class="card" onclick="location.href='/profile/<%= profile._id %>'">
+                        <h2><%= profile.firstName %> <%= profile.lastName %></h2>
+                        <% if (profile.profile) { %>
+                            <img src="<%= profile.profile %>" alt="<%= profile.firstName %>'s Profile Image">
+                        <% } %>
+                        <p>Age: <%= profile.age %></p>
+                        <p>Occupation: <%= profile.occupation %></p>
+                    </div>
+                <% }) %>
+            </div>
+            <div class="pagination">
+                <% for(let i = 1; i <= totalPages; i++) { %>
+                    <a href="/?page=<%= i %>" class="<%= page === i ? 'active' : '' %>"><%= i %></a>
+                <% } %>
+            </div>
+        <% } else { %>
+            <p>No profiles found</p>
+        <% } %>
+    </div>
+</div>

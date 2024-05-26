@@ -71,4 +71,31 @@ router.get('/', isAuthenticated, async (req, res) => {
   }
 });
 
+// Get profiles with pagination
+router.get('/', async (req, res) => {
+  const page = parseInt(req.query.page) || 1;
+  const limit = 5;
+  const skip = (page - 1) * limit;
+
+  try {
+      const profiles = await Profile.find().skip(skip).limit(limit);
+      const count = await Profile.countDocuments();
+      const totalPages = Math.ceil(count / limit);
+
+      res.render('profileDisplay', { profiles, page, totalPages });
+  } catch (err) {
+      res.status(500).send(err.message);
+  }
+});
+
+// Get profile details
+router.get('/profile/:id', async (req, res) => {
+  try {
+      const profile = await Profile.findById(req.params.id);
+      res.render('profileDetails', { profile });
+  } catch (err) {
+      res.status(500).send(err.message);
+  }
+});
+
 module.exports = router;
