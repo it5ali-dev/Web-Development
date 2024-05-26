@@ -64,7 +64,7 @@ router.post('/createProfile', async (req, res) => {
 router.get('/', isAuthenticated, async (req, res) => {
   try {
     const profiles = await Profile.find({ userId: { $ne: req.session.userId } });
-    res.render('profiles', { profiles });
+    res.render('./.partials/profiles', { profiles });
   } catch (err) {
     console.error('Error fetching profiles:', err);
     res.status(500).send('Server error');

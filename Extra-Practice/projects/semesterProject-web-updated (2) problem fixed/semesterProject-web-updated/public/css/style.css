@@ -71,3 +71,33 @@
   }
   .card-text.more { display: none; }
   .see-more, .see-less { cursor: pointer; color: blue; }
+  .above-footer a {
+    color: black;
+    text-decoration: none;
+  }
+  .above-footer ul {
+    list-style-type: none;
+  }
+  .above-footer li {
+    margin: 5px 0;
+  }
+  .above-footer li a:hover {
+    color: blue !important;
+  }
+  footer {
+    /* background-color: #CE4820; */
+    color: #fff;
+   }
+   footer a {
+    color: #fff;
+    text-decoration: none;
+   }
+   .socials img {
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 5px;
+    transition: all .4s;
+   }
+   .socials img:hover {
+    transform: rotateY(360deg);
+   }
