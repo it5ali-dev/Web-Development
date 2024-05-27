@@ -1,4 +1,4 @@
-const fs = require("fs")
+// const fs = require("fs")
 
 // Sync
 // fs.writeFileSync("./text.txt", "Hey there! this is getting started with NodeJs")
@@ -44,4 +44,22 @@ const fs = require("fs")
 // fs.unlink("./contact.txt", err => {
 //     console.log(err);
 // })
+
+// ================================================
+
+const fs = require("fs")
+const os = require("os")
+
+// console.log("1");
+// fs.readFile("./text.txt", "utf-8", (error, result) => {
+//     console.log(result);
+// })
+// console.log("2");
+// console.log("3");
+// console.log("4");
+
+console.log(os.cpus().length);
+
+// Default Thread Pool Size = 4
+// Max ? - 8-cores cpu - 8
 
