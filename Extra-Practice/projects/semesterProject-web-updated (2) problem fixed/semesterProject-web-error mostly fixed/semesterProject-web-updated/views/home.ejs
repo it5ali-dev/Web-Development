@@ -1,0 +1,16 @@
+
+
+<%- include('./partials/navbar'); %>
+
+<%- include('./partials/carousel'); %>
+<%- include('./partials/services'); %>
+<%- include('./partials/about'); %>
+<%- include('./partials/members'); %>
+
+<!-- Pass profiles, page, and totalPages to the showProfiles partial -->
+<%- include('./partials/showProfiles', { profiles: profiles, page: page, totalPages: totalPages }) %>
+
+<%- include('./partials/successStories') %>
+<%- include('./partials/extra') %>
+
+<%- include('./partials/footer'); %>

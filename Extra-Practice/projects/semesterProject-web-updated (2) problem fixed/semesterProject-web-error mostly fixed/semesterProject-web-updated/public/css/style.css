@@ -1,0 +1,134 @@
+.navbar-nav .nav-link {
+    color: white !important; /* Set color to white */
+  }
+  .carousel-item {
+    position: relative;
+    height: 90vh;
+  }
+  
+  .carousel-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4));
+    z-index: 1;
+  }
+  
+  .carousel-item img {
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+  
+  .carousel-caption {
+    z-index: 2;
+    position: relative;
+    color: #fff;
+  }
+  
+  /*  */
+  #reviews .review-carousel {
+    width: 80%;
+    margin: 0 auto;
+    height: 40vh;
+    background-color: #f8f9fa !important;
+    position: relative;
+  }
+  #reviews .carousel-item, .review-card, .card-body {
+    height: 100%;
+  }
+  #reviews .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #reviews .carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5%;
+  }
+  #reviews .carousel-control-prev {
+    left: -5%;
+  }
+  #reviews .carousel-control-next {
+    right: -5%;
+  }
+
+  .list-inline-item a {
+    color: #fff !important;
+    font-weight: bold;
+  }
+
+  .profile {
+    border-color: rgb(207, 207, 207) !important;
+  }
+  .profile-text {
+    color:  rgb(98, 97, 97) !important;
+  }
+  .card-text.more { display: none; }
+  .see-more, .see-less { cursor: pointer; color: blue; }
+  .above-footer a {
+    color: black;
+    text-decoration: none;
+  }
+  .above-footer ul {
+    list-style-type: none;
+  }
+  .above-footer li {
+    margin: 5px 0;
+  }
+  .above-footer li a:hover {
+    color: blue !important;
+  }
+  footer {
+    /* background-color: #CE4820; */
+    color: #fff;
+   }
+   footer a {
+    color: #fff;
+    text-decoration: none;
+   }
+   .socials img {
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 5px;
+    transition: all .4s;
+   }
+   .socials img:hover {
+    transform: rotateY(360deg);
+   }
+
+   /*  */
+   #show .card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 16px;
+    margin: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+#show .card img {
+    max-width: 100px;
+    border-radius: 50%;
+}
+#show .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+#show .pagination a {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    text-decoration: none;
+    color: black;
+}
+#show .pagination a.active {
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #007bff;
+}
