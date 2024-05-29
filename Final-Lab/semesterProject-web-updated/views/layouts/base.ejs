@@ -18,7 +18,23 @@
 
   <body>
 
-    <%- body %>
+
+    <%- include('../partials/navbar') %>
+    <%- include('../partials/carousel'); %>
+    <%- include('../partials/services'); %>
+    <%- include('../partials/about'); %>
+    <%- include('../partials/members'); %>
+
+    <% if (authenticated) { %>
+      <%- include('../partials/showProfiles', { profiles: profiles, page: page, totalPages: totalPages }) %>
+      <% } %>
+      
+      <%- include('../partials/successStories') %>
+      <%- include('../partials/extra') %>
+      
+      <%- body %>
+
+      <%- include('../partials/footer'); %>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

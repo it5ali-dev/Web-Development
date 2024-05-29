@@ -114,6 +114,16 @@ router.get('/profiles', async (req, res) => {
   }
 });
 
+// // Final Lab
+// router.get('/products', async (req, res) => {
+//   try {
+//     const products = await Product.find();
+//     res.render('products', { products });
+//   } catch (err) {
+//     res.status(500).send('Error retrieving products');
+//   }
+// });
+
 // router.get('/profile', async (req, res) => {
 //   try {
 //     const profile = await Profile.findById(req.params.id);
