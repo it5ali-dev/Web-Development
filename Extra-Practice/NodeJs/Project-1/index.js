@@ -51,12 +51,36 @@ app
     })
     .patch((req, res) => {
         // Edit user
-        return res.json({ status: "pending" })
+        const id = Number(req.params.id);
+        const userIndex = users.findIndex((user) => user.id === id);
+        if (userIndex !== -1) {
+            const updatedUser = { ...users[userIndex], ...req.body };
+            users[userIndex] = updatedUser;
+            fs.writeFile("./MOCK_DATA.json", JSON.stringify(users), (err) => {
+                if (err) {
+                    return res.status(500).json({ status: "500 Internal Server Error" });
+                }
+                return res.json({ status: "success", user: updatedUser });
+            });
+        } else {
+            return res.status(404).json({ status: "404 Not Found" });
+        }
     })
     .delete((req, res) => {
-        // delete user
-        return res.json({ status: "pending" })
-    })
+        const id = Number(req.params.id);
+        const userIndex = users.findIndex((user) => user.id === id);
+        if (userIndex !== -1) {
+            users.splice(userIndex, 1);
+            fs.writeFile("./MOCK_DATA.json", JSON.stringify(users), (err) => {
+                if (err) {
+                    return res.status(500).json({ status: "500 Internal Server Error" });
+                }
+                return res.json({ status: "success" });
+            });
+        } else {
+            return res.status(404).json({ status: "404 Not Found" });
+        }
+    });
 
 app.post("/api/user", (req, res) => {
     const body = req.body;
