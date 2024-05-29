@@ -1,0 +1,25 @@
+<div class="container my-5">
+  <div class="row">
+    <% products.forEach(product => { %>
+    <div class="col-md-4">
+      <a href="/products/<%= product._id %>" class="card-link">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title"><%= product.name %></h5>
+            <p class="card-text"><%= product.description %></p>
+            <p class="card-text">
+              <strong>Price:</strong> $<%= product.price %>
+            </p>
+            <p class="card-text">
+              <strong>Category:</strong> <%= product.category %>
+            </p>
+            <% if (product.isFeatured) { %>
+            <p class="card-text text-success">Featured Product</p>
+            <% } %>
+          </div>
+        </div>
+      </a>
+    </div>
+    <% }) %>
+  </div>
+</div>

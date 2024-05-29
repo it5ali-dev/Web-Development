@@ -1,0 +1,14 @@
+<div class="container my-5">
+    <h1>Visited Products</h1>
+        visited products
+    </a>
+    <% if (visitedProducts.length > 0) { %>
+      <ul>
+        <% visitedProducts.forEach(productId => { %>
+          <li><%= productId %></li>
+        <% }) %>
+      </ul>
+    <% } else { %>
+      <p>No visited products yet.</p>
+    <% } %>
+  </div>

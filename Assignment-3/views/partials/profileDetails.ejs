@@ -1,0 +1,22 @@
+<div class="container">
+    <h1><%= profile.firstName %> <%= profile.lastName %>'s Profile</h1>
+    <div class="profile-detail">
+        <% if (profile.profile) { %>
+            <img src="<%= profile.profile %>" class="my-3" alt="<%= profile.firstName %>'s Profile Image">
+        <% } %>
+        <p><strong>First Name: </strong><%= profile.firstName %></p>
+        <p><strong>Last Name: </strong><%= profile.lastName %></p>
+        <p><strong>Date of Birth: </strong><%= profile.dateOfBirth.toDateString() %></p>
+        <p><strong>Height: </strong><%= profile.height %> cm</p>
+        <p><strong>Status: </strong><%= profile.status %></p>
+        <p><strong>Language: </strong><%= profile.language %></p>
+        <p><strong>Religion: </strong><%= profile.religion %></p>
+        <p><strong>Occupation: </strong><%= profile.occupation %></p>
+        <p><strong>Pin Code: </strong><%= profile.pinCode %></p>
+        <p><strong>Age: </strong><%= profile.age %></p>
+        <p><strong>Phone Number: </strong><%= profile.phoneNumber %></p>
+        <p><strong>Address: </strong><%= profile.address %></p>
+        <p><strong>Note: </strong><%= profile.note %></p>
+    </div>
+    <a href="/" class="btn btn-primary">Back to Profiles</a>
+</div>
